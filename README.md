@@ -1,5 +1,7 @@
 # my-examples-of-iot-platforms
 
+# Twitter IOT Platforms either MQTT based or some other method
+
 By   [@rocksetta](https://twitter.com/rocksetta)
 
 
@@ -129,3 +131,6 @@ https://www.softwaretestinghelp.com/best-iot-platforms/
 
 [@devicepilot](https://twitter.com/devicepilot)
 
+
+
+## Fill out an issue if you know of any other IOT platforms on twitter
