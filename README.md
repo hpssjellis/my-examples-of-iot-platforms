@@ -1,6 +1,6 @@
 # my-examples-of-iot-platforms
 
-
+By   (@rocksetta](https://twitter.com/rocksetta)
 
 
 
@@ -26,9 +26,6 @@ https://www.softwaretestinghelp.com/best-iot-platforms/
 
 https://twitter.com/microsoftiot?lang=en
 
-@rocksetta
-
-https://twitter.com/rocksetta
 
 
 
