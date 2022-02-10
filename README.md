@@ -1,6 +1,6 @@
 # my-examples-of-iot-platforms
 
-By   (@rocksetta](https://twitter.com/rocksetta)
+By   [@rocksetta](https://twitter.com/rocksetta)
 
 
 
