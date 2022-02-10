@@ -81,52 +81,51 @@ https://www.softwaretestinghelp.com/best-iot-platforms/
 
 [@AdafruitIO](https://twitter.com/AdafruitIO)
 
-[@](https://twitter.com/)
+[@CayenneIoT](https://twitter.com/CayenneIoT)
 
-[@](https://twitter.com/)
+[@Microshareio](https://twitter.com/Microshareio)
 
-[@](https://twitter.com/)
+[@Akenza_IoT](https://twitter.com/Akenza_IoT)
 
-[@](https://twitter.com/)
+[@googlesheets](https://twitter.com/googlesheets)
 
-[@](https://twitter.com/)
+[@CargoHelium](https://twitter.com/CargoHelium)
 
-[@](https://twitter.com/)
+[@AzureIoT](https://twitter.com/AzureIoT)
 
-[@](https://twitter.com/)
+[@IBMWatson](https://twitter.com/IBMWatson)
 
-[@](https://twitter.com/)
+[@IBMIoT](https://twitter.com/IBMIoT)
 
-[@](https://twitter.com/)
+[@Hologram](https://twitter.com/Hologram)
 
-[@](https://twitter.com/)
+[@ThingWorx](https://twitter.com/ThingWorx)
 
-[@](https://twitter.com/)
+[@Fogwing_IoT](https://twitter.com/Fogwing_IoT)
 
-[@](https://twitter.com/)
+[@pipedream](https://twitter.com/pipedream)
 
-[@](https://twitter.com/)
+[@AxonizeIoT](https://twitter.com/AxonizeIoT)
 
-[@](https://twitter.com/)
+[@apacheiot](https://twitter.com/apacheiot)
 
-[@](https://twitter.com/)
+[@StreamPipes](https://twitter.com/StreamPipes)
 
-[@](https://twitter.com/)
+[@balena_io](https://twitter.com/balena_io)
 
-[@](https://twitter.com/)
+[@eagleio](https://twitter.com/eagleio)
 
-[@](https://twitter.com/)
+[@ubidots](https://twitter.com/ubidots)
 
-[@](https://twitter.com/)
+[@Advantech_IIoT](https://twitter.com/Advantech_IIoT)
 
-[@](https://twitter.com/)
+[@afero_IoT](https://twitter.com/afero_IoT)
 
-[@](https://twitter.com/)
+[@telit](https://twitter.com/telit)
 
-[@](https://twitter.com/)
+[@Telit_IoT](https://twitter.com/Telit_IoT)
 
-[@](https://twitter.com/)
+[@boomi](https://twitter.com/boomi)
 
-
-
+[@devicepilot](https://twitter.com/devicepilot)
 
