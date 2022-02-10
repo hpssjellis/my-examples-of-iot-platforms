@@ -24,8 +24,48 @@ https://www.softwaretestinghelp.com/best-iot-platforms/
 
 ## Twitter Links
 
-https://twitter.com/microsoftiot?lang=en
 
+[@microsoftiot](https://twitter.com/microsoftiot?lang=en)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
+
+[@](https://twitter.com/)
 
 
 
