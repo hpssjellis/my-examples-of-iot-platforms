@@ -4,7 +4,9 @@
 
 By   [@rocksetta](https://twitter.com/rocksetta)
 
+## Best Links
 
+[Pascalbod](https://systev.com/a-list-of-iot-platforms/)
 
 
 ## IOT Reviews
