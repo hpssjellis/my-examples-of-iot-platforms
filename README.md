@@ -28,7 +28,7 @@ https://thingspeak.com/
 
 ## Best Links 
 
-[Pascalbod](https://systev.com/a-list-of-iot-platforms/)
+[Pascalbod](https://systev.com/a-list-of-iot-platforms/)  This is a resemably uptodate list of IOT websites. Same as the one below after the twitter list.
 
 
 ## IOT Reviews
