@@ -1,5 +1,8 @@
 # my-examples-of-iot-platforms
 
+website static MQTT examples at 
+https://hpssjellis.github.io/my-examples-of-iot-platforms/public/index.html
+
 # Twitter IOT Platforms either MQTT based or some other method (probably HTTPS)
 
 By   [@rocksetta](https://twitter.com/rocksetta)
