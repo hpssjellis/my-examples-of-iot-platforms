@@ -1,10 +1,27 @@
 # my-examples-of-iot-platforms
 
-# Twitter IOT Platforms either MQTT based or some other method
+# Twitter IOT Platforms either MQTT based or some other method (probably HTTPS)
 
 By   [@rocksetta](https://twitter.com/rocksetta)
 
-## Best Links
+
+
+## Tested by me or others that work with the https://www.helium.com/ network
+
+###  MQTT
+https://flespi.com/
+
+https://io.adafruit.com/
+
+### HTTPS
+
+https://tago.io/
+
+https://thingspeak.com/
+
+
+
+## Best Links 
 
 [Pascalbod](https://systev.com/a-list-of-iot-platforms/)
 
