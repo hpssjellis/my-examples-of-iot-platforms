@@ -13,6 +13,11 @@ https://flespi.com/
 
 https://io.adafruit.com/
 
+https://www.hivemq.com/
+
+http://www.dioty.co/
+
+
 ### HTTPS
 
 https://tago.io/
