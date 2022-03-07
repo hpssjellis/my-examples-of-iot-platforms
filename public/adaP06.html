@@ -87,7 +87,7 @@ function getFormValues(fobj){
 }
 function sendToParticle(myIn){
     document.all.myParameter.value = myIn
-    document.myForm.action = 'https://api.particle.io/v1/devices/' + document.all.myDeviceId.value + '/' + document.all.myFunctionName.value
+    document.myForm.action = 'https://io.adafruit.com/api/v2/webhooks/feed/dQTc61soU5S4tMv8jSuSjY9uSqVz/raw' + document.all.myDeviceId.value 
     myAjax(document.all.myCoolForm, document.myForm.action, 'myDivId')   
     
 }
@@ -197,8 +197,9 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
 <!-- ********************* You change the following buttons as needed -->  
 
    
-   
-   
+<input id="myTextIn" type=text value="56" onChange="{
+       sendToParticle(document.getElementById('myTextIn').value)                                                   
+}"> 
    
    
 
