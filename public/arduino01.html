@@ -1,0 +1,24 @@
+
+<input id="myIfttEvent" type=text placeeholder="myEvent" value="test-webhook"><br>
+<input id="myIfttKey" type=text placeeholder="9437582374982374985" value="jjjjjjjjjjjjjjjjjjjjj"><br>
+Data:<br>
+value1:<input id="temperature_1" type=text value="45"><br>
+value2:<input id="myValue2" type=text value="myTwo"><br>
+value3:<input id="myValue3" type=text value="myThree"><br>
+
+<input type=button value=ifttt8 onclick="{
+(async function(){
+    let data = {value1:43,value2:34,value3:'hi'}
+    let myResponse = fetch('https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myIfttEvent').value + '/with/key/' + document.getElementById('myIfttKey').value, {
+        method: 'POST', 
+        mode: 'no-cors',
+        headers: {
+           'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'value1=' + document.getElementById('myValue1').value + '&value2=' + document.getElementById('myValue2').value +'&value3=' + document.getElementById('myValue3').value
+       // body: 'value1=' + document.getElementById('myValue1').value + '&value2=' + document.getElementById('myValue2').value +'&value3=' + document.getElementById('myValue3').value
+
+      })
+    document.getElementById('myDiv01').innerHTML = await JSON.stringify(myResponse) 
+     }  )()
+}">
