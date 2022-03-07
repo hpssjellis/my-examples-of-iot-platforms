@@ -87,7 +87,7 @@ function getFormValues(fobj){
 }
 function sendToParticle(myIn){
     document.all.myParameter.value = myIn
-    document.myForm.action = 'https://io.adafruit.com/api/v2/webhooks/feed/dQTc61soU5S4tMv8jSuSjY9uSqVz/raw' + document.all.myDeviceId.value 
+    document.myForm.action = 'https://io.adafruit.com/api/v2/webhooks/feed/dQTc61soU5S4tMv8jSuSjY9uSqVz/raw' 
     myAjax(document.all.myCoolForm, document.myForm.action, 'myDivId')   
     
 }
