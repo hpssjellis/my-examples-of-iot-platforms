@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Particle Web Communication by Fred </title>
+<title>Adafruit.io Web Communication by Fred V0.0.1.1</title>
 
 <font style="font-size:30px">
 
@@ -87,7 +87,7 @@ function getFormValues(fobj){
 }
 function sendToParticle(myIn){
     document.all.myParameter.value = myIn
-    document.myForm.action = 'https://io.adafruit.com/api/v2/webhooks/feed/:' + document.all.myDeviceId.value 
+    document.myForm.action = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.all.myDeviceId.value 
     myAjax(document.all.myCoolForm, document.myForm.action, 'myDivId')   
     
 }
