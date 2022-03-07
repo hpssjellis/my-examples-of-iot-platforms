@@ -1,5 +1,5 @@
 
-<h6>Version 0.0.1.0.4 </h6>
+<h6>Version 0.0.1.5 </h6>
 
 <script>
    var getPost = async function () {
@@ -9,7 +9,7 @@
 	var post = await postResp.json();
 
 	// Get the author
-	var myAdaResponse = await fetch('https://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/notify');
+	var myAdaResponse = await fetch('ws://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/notify');
 	var myData = await myAdaResponse.json();
 
 	console.log(myData);
