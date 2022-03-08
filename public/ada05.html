@@ -1,5 +1,5 @@
 
-<h6>Version 0.2.0-21 </h6>
+<h6>Version 0.2.0-22 </h6>
 
 <script>
    var getPost = async function () {
@@ -54,7 +54,7 @@
 <script>
 	
 async function sendData() {
-  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/raw");
+  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/");
   var formdata = new FormData(myForm);
   var request = new Request(url, { method: "POST", body: formdata });
   var response = await fetch(request);
