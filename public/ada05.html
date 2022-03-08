@@ -44,22 +44,9 @@
 
 
 
-
-
-
-<input type=button value=try onclick="{
-async function sendData() {
- var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/raw");
- var formdata = new FormData(myForm);
- var request = new Request(url, { method: "POST",
-                                  body: formdata });
- var response = await fetch(request);
-document.getElementById('myDiv01').innerHTML = await JSON.stringify(myData, 3, null, 4);
-}">
-
 <form id="myForm" >
   First name:<br>
-  <input type="text" name="temperature_1" value="Enter Data">
+  <input type="text" name="temperature_1" value="34">
   <br>
   Last name:<br>
   <input type="text" name="last" value="Enter Data">
@@ -67,3 +54,16 @@ document.getElementById('myDiv01').innerHTML = await JSON.stringify(myData, 3, n
   <br>
   <input type="submit" value="Submit">
 </form>
+
+
+<input type=button value=try onclick="{
+async function sendData() {
+ var url = new URL('https://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/raw');
+ var formdata = new FormData(myForm);
+ var request = new Request(url, { method: "POST",
+                                  body: formdata });
+ var response = await fetch(request);
+ document.getElementById('myDiv01').innerHTML = await JSON.stringify(response, 3, null, 4);
+}">
+
+
