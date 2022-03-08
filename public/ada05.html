@@ -1,5 +1,5 @@
 
-<h6>Version 0.2.0-23 </h6>
+<h6>Version 0.2.0-24 </h6>
 
 <script>
    var getPost = async function () {
@@ -46,7 +46,7 @@
 
 <form id="myForm" >
   temperature-1: <br>
-  <input type="text" id="myTemp" name="temperature-1" value="34">
+  <input type="text" id="myTemp" name="value" value="34">
   <br>
 
 </form>
@@ -56,8 +56,8 @@
 async function sendData() {
   var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/raw");
  // var formdata = new FormData(myForm);
- // var request = new Request(url, { method: "POST", body: formdata });
-  var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
+  var request = new Request(url, { method: "POST", body: formdata });
+ // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   var response = await fetch(request);
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(response, 3, null, 4);
 }	
