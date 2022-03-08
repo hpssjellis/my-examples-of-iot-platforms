@@ -1,5 +1,5 @@
 
-<h6>Version 0.2.1-29 </h6>
+<h6>Version 0.2.2-30 </h6>
 
 <script>
    var getPost = async function () {
@@ -60,7 +60,8 @@ async function sendData() {
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   var response = await fetch(request);
-  document.getElementById('myDiv01').innerHTML = await JSON.stringify(response, 3, null, 4);
+  console.log(response)	
+  document.getElementById('myDiv01').innerHTML = await JSON.stringify(response, null, 4);
 }	
 </script>
 
