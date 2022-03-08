@@ -55,7 +55,7 @@
 	
 async function sendData() {
   var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/6Nu1QLJYj1X2hDfgQ8Ua3WRf4ZC7/raw");
- // var formdata = new FormData(myForm);
+  var formdata = new FormData(myForm);
   var request = new Request(url, { method: "POST", body: formdata });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   var response = await fetch(request);
