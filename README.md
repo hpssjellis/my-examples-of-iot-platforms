@@ -364,8 +364,22 @@ https://wolkabout.com/platform/#first
 https://yaler.net/
 
 
+
+
 ### A few more links I found
 
 https://test.mosquitto.org/
 
 https://www.emqx.com/
+
+https://flespi.com/
+
+https://io.adafruit.com/
+
+https://www.hivemq.com/
+
+http://www.dioty.co/
+
+
+https://tago.io/
+
