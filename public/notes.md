@@ -28,3 +28,33 @@
     }
     
     client.on("connect", run)
+
+
+
+
+
+
+
+
+/**
+   * Send an MQTT message with new image version details.
+   *
+   * @param image the image
+   * @returns {Promise<void>}
+   */
+  async notify(image) {
+    const options = {};
+    if (this.configuration.user) {
+      options.username = this.configuration.user;
+    }
+    if (this.configuration.password) {
+      options.password = this.configuration.password;
+    }
+    const client = await mqtt.connectAsync(this.configuration.url, options);
+    return client.publish(this.configuration.topic, JSON.stringify(image));
+  }
+    
+    
+    
+    
+    
