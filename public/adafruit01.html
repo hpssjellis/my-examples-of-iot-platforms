@@ -1,11 +1,11 @@
-<h6>version 0.0.3-3</h6>
+<h6>version 0.1.0-4</h6>
 
 
 
 <script>
 	
 async function sendData() {
-  var url = new URL("https://io.adafruit.com/api/groups/" + document.getElementById('myGroup').value + "/send.json?" + document.getElementById('myKey').value);
+  var url = new URL("https://io.adafruit.com/api/v2" + document.getElementById('myUser').value + "/groups/" + document.getElementById('myGroup').value + "/send.json?" + document.getElementById('myKey').value);
  // var formdata = new FormData(myForm);
   var request = new Request(url, { method: "POST", body: document.getElementById('myTemp').value});
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
@@ -24,13 +24,14 @@ send https://io.adafruit.com/api/groups/:group_name/send.json?x-aio-key=a0a0a00a
 
 receive
 https://io.adafruit.com/api/groups/weather/receive.json?x-aio-key=a0a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a0a
-</pre>
+</pre><br><br>
 
 
-Key:<input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a"><br>
-Group Name: <input type=text id="myGroup" value="myGroup">
-Field Name: <input type=text id="myField" value="temperature-1">
-Send Value: <input type=text id="myTemp"  value="{'value':34}">
+Key:<input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80><br>
+User Name: <input type=text id="myUser" value="jo-user"><br>
+Group Name: <input type=text id="myGroup" value="myGroup"><br>
+Field Name: <input type=text id="myField" value="temperature-1"><br>
+Send Value: <input type=text id="myTemp"  value="{'value':34}"><br>
 
 
 <div id="myDiv01">...</div><br><br>
