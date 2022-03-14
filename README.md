@@ -407,6 +407,17 @@ https://www.losant.com/pricing
 https://flespi.com/pricing      ?????????????
 https://tago.io/pricing/
 
+https://www.waylay.io/
+
+
+https://www.balena.io/
+
+
+
+
+
+
+
 
 http://www.dioty.co/samples   look at arduino code
 
