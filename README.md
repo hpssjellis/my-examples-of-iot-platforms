@@ -413,6 +413,7 @@ https://www.waylay.io/
 https://www.balena.io/
 
 
+https://www.scaleway.com/en/iot-hub/
 
 
 
