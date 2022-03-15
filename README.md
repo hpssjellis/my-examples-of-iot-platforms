@@ -394,18 +394,18 @@ https://tago.io/
 
 
 MQTT   Webhook
-https://docs.akenza.io/api-reference/mqtt
-https://asksensors.com/
-https://www.aylanetworks.com/ayla-dev-kit-freel-trial-program.html
-https://beebotte.com/overview
-https://developers.mydevices.com/cayenne/docs/getting-started/#getting-started-arduino-get-started-in-minutes
-https://dweet.io/play/
-https://freeboard.io/#pricing
-https://iotguru.cloud/
-https://liveobjects.orange-business.com/#/liveobjects
-https://www.losant.com/pricing
+https://docs.akenza.io/api-reference/mqtt   
+https://asksensors.com/     
+https://www.aylanetworks.com/ayla-dev-kit-freel-trial-program.html    
+https://beebotte.com/overview    
+https://developers.mydevices.com/cayenne/docs/getting-started/#getting-started-arduino-get-started-in-minutes    
+https://dweet.io/play/   
+https://freeboard.io/#pricing    
+https://iotguru.cloud/    
+https://liveobjects.orange-business.com/#/liveobjects   
+https://www.losant.com/pricing    
 https://flespi.com/pricing      ?????????????
-https://tago.io/pricing/
+https://tago.io/pricing/    
 
 https://www.waylay.io/
 
@@ -426,7 +426,7 @@ http://www.dioty.co/samples   look at arduino code
 
 SIM   CAT-M1 or NB-IOT
 
-https://www.hologram.io/pricing
+https://www.hologram.io/pricing   
 https://www.aeris.com/neo/pricing/
 
 
