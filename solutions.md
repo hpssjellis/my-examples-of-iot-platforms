@@ -18,6 +18,14 @@ https://docs.ubidots.com/v1.6/reference/authentication
 
 
 
+others
+
+
+
+1ohers
+
+
+
 
 https://www.youtube.com/watch?v=SLEaW8qK3Rg
 
