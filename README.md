@@ -396,21 +396,33 @@ https://tago.io/
 MQTT  and possible Webhooks:
 
 https://thingspeak.com/login
-https://io.adafruit.com/   
+
+https://io.adafruit.com/ 
+
 https://pipedream.com/   
 
 https://tago.io/pricing/      
 
 https://docs.akenza.io/api-reference/mqtt   
+
 https://asksensors.com/     
-https://www.aylanetworks.com/ayla-dev-kit-freel-trial-program.html    
-https://beebotte.com/overview    
-https://developers.mydevices.com/cayenne/docs/getting-started/#getting-started-arduino-get-started-in-minutes    
+
+https://www.aylanetworks.com/ayla-dev-kit-freel-trial-program.html  
+
+https://beebotte.com/overview 
+
+https://developers.mydevices.com/cayenne/docs/getting-started/#getting-started-arduino-get-started-in-minutes  
+
 https://dweet.io/play/   
-https://freeboard.io/#pricing    
-https://iotguru.cloud/    
-https://liveobjects.orange-business.com/#/liveobjects   
-https://www.losant.com/pricing    
+
+https://freeboard.io/#pricing 
+
+https://iotguru.cloud/  
+
+https://liveobjects.orange-business.com/#/liveobjects  
+
+https://www.losant.com/pricing
+
 https://flespi.com/pricing      ?????????????
 
 
