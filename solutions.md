@@ -1,5 +1,24 @@
 Possible IOT solutions
 
+
+as of march 16 2022
+
+
+
+
+
+ubidots
+
+good docs
+
+https://docs.ubidots.com/v1.6/reference/authentication
+
+
+
+
+
+
+
 https://www.youtube.com/watch?v=SLEaW8qK3Rg
 
 https://elements.heroku.com/buttons/berkedel/mqttest
