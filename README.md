@@ -393,7 +393,14 @@ https://tago.io/
 
 
 
-MQTT   Webhook
+MQTT  and possible Webhooks:
+
+https://thingspeak.com/login
+https://io.adafruit.com/   
+https://pipedream.com/   
+
+https://tago.io/pricing/      
+
 https://docs.akenza.io/api-reference/mqtt   
 https://asksensors.com/     
 https://www.aylanetworks.com/ayla-dev-kit-freel-trial-program.html    
@@ -405,15 +412,17 @@ https://iotguru.cloud/
 https://liveobjects.orange-business.com/#/liveobjects   
 https://www.losant.com/pricing    
 https://flespi.com/pricing      ?????????????
-https://tago.io/pricing/    
-
-https://www.waylay.io/
 
 
-https://www.balena.io/
+## Almost perfect
+
+https://www.waylay.io/ 
 
 
-https://www.scaleway.com/en/iot-hub/
+https://www.balena.io/   basically only for RaspberryPi base needing software installed
+
+
+https://www.scaleway.com/en/iot-hub/  -  Great site but needs credit card infor see this example https://github.com/luisomoreau/ESP32-cam-MQTT
 
 
 
