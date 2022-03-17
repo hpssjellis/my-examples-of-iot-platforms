@@ -1,5 +1,5 @@
 
-<h6>Version 0.1.3-9</h6>
+<h6>Version 0.1.4-10</h6>
 
 
 
@@ -43,7 +43,7 @@ async function myMqtt() {
         onSuccess: onConnect,
         onFailure: function (message) {
             console.log("Connection failed: " + message.errorMessage + "Retrying...")
-            setTimeout(MQTTconnect, reconnectTimeout);
+            setTimeout(myMqtt, reconnectTimeout);
         }
     };
 
@@ -61,7 +61,7 @@ async function myMqtt() {
 };
 
 function onConnectionLost(response) {
-    setTimeout(MQTTconnect, reconnectTimeout);
+    setTimeout(myMqtt, reconnectTimeout);
 
     console.log("Connection Lost: ");
 };
@@ -78,16 +78,16 @@ function onMessageArrived(message) {
 
 
 
-<input id="myURL" type=text value='https://industrial.api.ubidots.com/api/v2.0/devices/portenta5/temp' size=70><br>
-<input id="myCode" type=text value='authenticate' size=70><br>
-<input id="myTopic" type=text value='topic' size=70><br>
+URL: <input id="myURL" type=text value='https://industrial.api.ubidots.com' size=70><br>
+Token: <input id="myCode" type=text value='authenticate' size=70><br>
+Topic: <input id="myTopic" type=text value='/api/v2.0/devices/DEVICE/TOPIC' size=70><br>
 
 
-<input type=button value="using fetch" onclick="myRun()"><br>
+<input type=button value="Ubidots using fetch" onclick="myRun()"><br>
 
 
 
-<input type=button value="using paho-mqtt" onclick="{
+<input type=button value="Ubidots using paho-mqtt" onclick="{
                                      
  host = document.getElementById('myURL').value;
  myUsername = document.getElementById('myCode').value    
