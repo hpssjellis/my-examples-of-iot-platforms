@@ -1,0 +1,13 @@
+
+
+<input id="myURL" type=text value='https://example.com/path'>
+<input id="myCode" type=text value='authenticate'>
+
+
+
+<script>
+let response = await fetch(document.getElementById('myURL').value, {method:'GET', 
+headers: {'Authorization': 'Basic ' + btoa(document.getElementById('myCode').value)}});
+let data = await response.json();
+console.log(data);
+</script>
