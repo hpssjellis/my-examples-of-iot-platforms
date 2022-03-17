@@ -1,24 +1,19 @@
 
-<h6>Version 0.1.4-10</h6>
+<h6>Version 0.1.5-11</h6>
 
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
 
 
 <script>
 async function myRun() {  
 let response = await fetch(document.getElementById('myURL').value, {method:'GET', 
-headers: {'Authorization': 'Basic ' + btoa(document.getElementById('myCode').value)}});
+//headers: {'Authorization': 'Basic ' + btoa(document.getElementById('myCode').value)}});
+headers: {'X-Auth-Token:': document.getElementById('myCode').value)}});
 let data = await response.json();
 console.log(data);
 }  
-</script>
 
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
-
-<script>
   
   
   
@@ -38,7 +33,7 @@ async function myMqtt() {
     let options = {
         timeout: 3,
         useSSL: useTLS,
-        username, myUserrname
+        username: myUserrname,
         cleanSession: cleansession,
         onSuccess: onConnect,
         onFailure: function (message) {
@@ -64,6 +59,7 @@ function onConnectionLost(response) {
     setTimeout(myMqtt, reconnectTimeout);
 
     console.log("Connection Lost: ");
+  
 };
 
 function onMessageArrived(message) {
