@@ -91,3 +91,22 @@ Topic: <input id="myTopic" type=text value='/api/v2.0/devices/DEVICE/TOPIC' size
  myMqtt();
                                      
  }"><br>
+
+
+<form target="_blank" action="https://io.adafruit.com/api/v2/webhooks/feed/dQTc61soU5S4tMv8jSuSjY9uSqVz" method="post">
+
+   Token: <input name=token type=text value='authenticate' size=70> Do not save this!<br>
+    <button type="submit">Ubidots from form</button>
+</form>
+
+
+<!--
+
+function sendToParticle(myIn){
+    document.all.myParameter.value = myIn
+    document.myForm.action = 'https://api.particle.io/v1/devices/' + document.all.myDeviceId.value + '/' + document.all.myFunctionName.value
+    myAjax(document.all.myCoolForm, document.myForm.action, 'myDivId')   
+    
+}
+
+-->
