@@ -1,5 +1,5 @@
 
-<h6>Version 0.1.7-18</h6>
+<h6>Version 0.1.8-19</h6>
 
 
 
@@ -30,7 +30,7 @@ let tempData = new Array();
 let mqtt;
   
 function myMqtt() {  
-    mqtt = new Paho.MQTT.Client(host, port, "mqtt_panel" + parseInt(Math.random() * 100, 10));
+    mqtt = new Paho.Client(host, port, "mqtt_panel" + parseInt(Math.random() * 100, 10));
     let options = {
         timeout: 3,
         useSSL: useTLS,
@@ -112,7 +112,7 @@ function sendToParticle(myIn){
 }
 
 
-
+/
 
 
 
