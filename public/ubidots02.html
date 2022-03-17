@@ -1,5 +1,5 @@
 
-<h6>Version 0.1.6-15</h6>
+<h6>Version 0.1.7-16</h6>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
@@ -33,7 +33,7 @@ function myMqtt() {
     let options = {
         timeout: 3,
         useSSL: useTLS,
-        username: myUserrname,
+        token: myUsername,
         cleanSession: cleansession,
         onSuccess: onConnect,
         onFailure: function (message) {
@@ -160,6 +160,7 @@ function send(e,form) {
 URL: <input  name= type=text value='https://industrial.api.ubidots.com' size=70><br>
 Token: <input  name=token type=text value='authenticate' size=70> Do not save this!<br>
 Topic: <input  name=topic type=text value='/api/v2.0/devices/DEVICE/TOPIC' size=70><br>
+temp: <input  name=temp type=text value='34' size=70><br>
 
   <input type="submit">    
 </form>
