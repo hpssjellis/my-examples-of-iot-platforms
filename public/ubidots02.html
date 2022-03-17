@@ -1,5 +1,5 @@
 
-<h6>Version 0.1.0-6</h6>
+<h6>Version 0.1.1-7</h6>
 
 
 
@@ -19,18 +19,18 @@ console.log(data);
 <input id="myTopic" type=text value='topic' size=70><br>
 
 
-<input type=button value=go onclick="myRun()">
+<input type=button value="using fetch" onclick="myRun()"><br>
 
 
 
-<input type=button value=go onclick="{
+<input type=button value="using paho-mqtt" onclick="{
                                      
  host = document.getElementById('myURL').value;
  username = document.getElementById('myCode').value    
  topic = document.getElementById('myTopic').value                                   
  MQTTconnect();
                                      
- }">
+ }"><br>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
