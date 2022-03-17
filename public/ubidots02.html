@@ -1,5 +1,5 @@
 
-<h6>Version 0.1.6-14</h6>
+<h6>Version 0.1.6-15</h6>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
@@ -145,7 +145,7 @@ function sendToParticle(myIn){
 <script>
 
 function send(e,form) {
-  fetch(document.getElementById('myURL').value, {method:'post', body: new FormData(form)});
+  fetch(document.getElementById('myURL').value, {method:'post',  mode: 'no-cors', body: new FormData(form)});
 
   console.log('We send post asynchronously (AJAX)');
   e.preventDefault();
