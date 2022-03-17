@@ -20,3 +20,73 @@ console.log(data);
 
 
 <input type=button value=go onclick="myRun()">
+
+
+
+<input type=button value=go onclick="{
+                                     
+ host = document.getElementById('myURL').value;
+ username = document.getElementById('myCode').value    
+ topic = document.getElementById('myTopic').value                                   
+ MQTTconnect();
+                                     
+ }">
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
+
+<script>
+  
+  
+  
+  
+  let host = 'localhost';
+let port = 1883;
+let username = "fred";
+let topic = '#';
+let useTLS = false;
+let cleansession = true;
+let reconnectTimeout = 10000;
+let tempData = new Array();
+let mqtt;
+  
+async function myMqtt() {  
+    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel" + parseInt(Math.random() * 100, 10));
+    let options = {
+        timeout: 3,
+        useSSL: useTLS,
+        cleanSession: cleansession,
+        onSuccess: onConnect,
+        onFailure: function (message) {
+            console.log("Connection failed: " + message.errorMessage + "Retrying...")
+            setTimeout(MQTTconnect, reconnectTimeout);
+        }
+    };
+
+    mqtt.onConnectionLost = onConnectionLost;
+    mqtt.onMessageArrived = onMessageArrived;
+    console.log("Host: " + host + ", Port: " + port + ", Path: " + path + " TLS: " + useTLS);
+    mqtt.connect(options);
+}
+  
+  
+  function onConnect() {
+    console.log('Connected to ' + host + ':' + port + path+ ", topic: "+topic)
+    mqtt.subscribe(topic, { qos: 0 });
+
+};
+
+function onConnectionLost(response) {
+    setTimeout(MQTTconnect, reconnectTimeout);
+
+    console.log("Connection Lost: ");
+};
+
+function onMessageArrived(message) {
+    let topic = message.destinationName;
+    let payload = message.payloadString;
+    console.log("Topic: " + topic + ", Message payload: " + payload);
+}
+  
+
+</script>
