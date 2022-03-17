@@ -58,3 +58,18 @@
     
     
     
+    
+    
+    
+    ```
+    
+    let response = await fetch('https://example.com/path', {method:'GET', 
+headers: {'Authorization': 'Basic ' + btoa('login:password')}});
+let data = await response.json();
+console.log(data);
+    
+    
+    ```
+    
+    
+    
