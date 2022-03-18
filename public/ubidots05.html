@@ -1,4 +1,7 @@
-<h6> Version 0.1.2-22</h6>
+<h6> Version 0.1.2-23</h6>
+
+
+
 <h3 align=center> Ubidots Vanilla Javascript Async Fetch Form Post by @Rocksetta<h3>
 
 
@@ -16,7 +19,7 @@
                    body: JSON.stringify({
                     // your expected POST request payload goes here
                    // 'token': document.getElementById('myAuthenticate').value,
-                     document.getElementById('myVariable').value :document.getElementById('myAmount').value , 
+                    "'"+ document.getElementById('myVariable').value + "'" : "'"+document.getElementById('myAmount').value +"'" , 
                      'label' : document.getElementById('myDevice').value  
                     })
                  });
