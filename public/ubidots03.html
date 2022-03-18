@@ -14,11 +14,10 @@
                    body: JSON.stringify({
                     // your expected POST request payload goes here
                    // 'token': document.getElementById('myAuthenticate').value,
-                     body: {'temp':'223'}   
+                     body: {'temp':'223', 'label' : 'portenta5'}   
                     })
                  });
                   
-                 console.log(data);
                  const data = await response.json();
               // enter your logic when the fetch is successful
                  console.log("data");
