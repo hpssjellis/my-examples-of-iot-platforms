@@ -7,12 +7,13 @@
                 const response = await fetch('https://industrial.api.ubidots.com/api/v2.0/devices/', {
                  method: 'POST',
                  headers: {
-                   'Content-Type': 'application/json'
+                   'Content-Type': 'application/json',
+                    'X-Auth-Token': document.getElementById('myAuthenticate').value
                    },
                    body: JSON.stringify({
              // your expected POST request payload goes here
-                     token: document.getElementById('myAuthenticate').value,
-                     body: "My post content."
+                     title: "cool",
+                     body: {"temp":223}
                     })
                  });
                  const data = await response.json();
