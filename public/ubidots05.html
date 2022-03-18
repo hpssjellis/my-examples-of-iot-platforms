@@ -1,4 +1,4 @@
-<h6> Version 0.1.2-29</h6>
+<h6> Version 0.1.2-30</h6>
 
 
 
@@ -16,7 +16,7 @@
                        'x-auth-token' : document.getElementById('myAuthenticate').value
                  //   'token': document.getElementById('myAuthenticate').value
                    },
-                   body: JSON.stringify( document.getElementById('myBody').value )
+                   body: document.getElementById('myBody').value 
                  });
                  //     body: JSON.stringify({a: 1, b: 'Textual content'}) 
                  const data = await response.json();
@@ -39,11 +39,10 @@
 
 URL: <input id="myURL" type=text value="https://industrial.api.ubidots.com/api/v2.0/devices/" size=70><br>
 Authentication: <input id="myAuthenticate" type=text value="authenticate" ><br>
-New Device: <input id="myDevice" type=text value="Portenta8" ><br>
       
 <a href="https://codebeautify.org/jsonviewer">https://codebeautify.org/jsonviewer</a><br>      
 Body: <br>
-<textarea id="myBody" >{'label' : 'portenta6' }</textarea><br>
+<textarea id="myBody" rows=50 cols=10 NOWRAP >{'label' : 'portenta6' }</textarea><br>
 
       
       
