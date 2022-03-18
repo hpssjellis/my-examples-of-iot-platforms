@@ -1,4 +1,4 @@
-<h6> Version 0.0.1-4</h6>
+<h6> Version 0.0.1-5</h6>
 
 
 <script>
@@ -8,16 +8,19 @@
                  method: 'POST',
                  headers: {
                    'Content-Type': 'application/json',
-                    'X-Auth-Token': "'"+ document.getElementById('myAuthenticate').value +"'"
+                   //  'X-Auth-Token': document.getElementById('myAuthenticate').value
+                    'token': document.getElementById('myAuthenticate').value
                    },
                    body: JSON.stringify({
              // your expected POST request payload goes here
-                     title: "cool",
-                     body: {"temp":223}
+                     title: 'cool',
+                     body: {'temp':'223'}
                     })
                  });
+                  
+                 console.log(data);
                  const data = await response.json();
-              // enter you logic when the fetch is successful
+              // enter your logic when the fetch is successful
                  console.log("data");
                  console.log(data);
                } catch(error) {
