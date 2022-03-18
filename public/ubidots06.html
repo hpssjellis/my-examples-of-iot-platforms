@@ -1,4 +1,4 @@
-<h6> Version 0.2.0-34</h6>
+<h6> Version 0.2.0-35</h6>
 
 
 
@@ -35,8 +35,12 @@
 
 
 URL: <input id="myURL" type=text value="https://industrial.api.ubidots.com/api/v1.6/variables/000000-variable-id-0000000/values" size=90><br>
-Authentication: <input id="myAuthenticate" type=text value="authenticate" > Do not save this<br>
+Variable ID: <input id="myVariableId" type=text value="000000-variable-id-0000000" onChange="{
+ document.getElementById('myURL').value  = 'https://industrial.api.ubidots.com/api/v1.6/variables/'+this.value+'/values'    
       
+}"> Do not save this<br>
+Authentication: <input id="myAuthenticate" type=text value="authenticate" > Do not save this<br> 
+
 <a href="https://codebeautify.org/jsonviewer">https://codebeautify.org/jsonviewer</a><br>      
 Body: <br>
 <textarea id="myBody" rows=6 cols=50 NOWRAP >
