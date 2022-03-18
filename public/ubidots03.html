@@ -1,15 +1,14 @@
-<h6> Version 0.0.1-11</h6>
+<h6> Version 0.0.1-14</h6>
 
 
 <script>
       const asyncPostCall = async () => {
             try {
-                const response = await fetch('https://industrial.api.ubidots.com', {
+                const response = await fetch('https://industrial.api.ubidots.com/api/v2.0/devices/', {
                  method: 'POST',
                  headers: {
-                   'Content-Type' : 'application/json',
-                   'path'         : '/api/v2.0/devices/',
-                   'X-Auth-Token' : document.getElementById('myAuthenticate').value
+                   'content-type' : 'application/json',
+                   'x-auth-token' : document.getElementById('myAuthenticate').value
                  //   'token': document.getElementById('myAuthenticate').value
                    },
                    body: JSON.stringify({
