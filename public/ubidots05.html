@@ -18,9 +18,8 @@
                    },
                    body: JSON.stringify({
                     // your expected POST request payload goes here
-                   // 'token': document.getElementById('myAuthenticate').value,
-                    "'"+ document.getElementById('myVariable').value + "'" : "'"+document.getElementById('myAmount').value +"'" , 
-                     'label' : document.getElementById('myDevice').value  
+                     'label' : document.getElementById('myDevice').value,
+                     'properties': { document.getElementById('myAmount').value : document.getElementById('myAmount').value }    
                     })
                  });
                  //     body: JSON.stringify({a: 1, b: 'Textual content'}) 
