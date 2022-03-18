@@ -1,11 +1,11 @@
-<h6> Version 0.1.1-21</h6>
+<h6> Version 0.1.2-22</h6>
 <h3 align=center> Ubidots Vanilla Javascript Async Fetch Form Post by @Rocksetta<h3>
 
 
 <script>
       const asyncPostCall = async () => {
             try {
-                const response = await fetch('https://industrial.api.ubidots.com/api/v2.0/devices/', {
+                const response = await fetch(document.getElementById('myURL').value, {
                  method: 'POST',
                  headers: {      
                        'accept': 'application/json',
@@ -16,7 +16,7 @@
                    body: JSON.stringify({
                     // your expected POST request payload goes here
                    // 'token': document.getElementById('myAuthenticate').value,
-                     'temp':'223', 
+                     document.getElementById('myVariable').value :document.getElementById('myAmount').value , 
                      'label' : document.getElementById('myDevice').value  
                     })
                  });
@@ -39,8 +39,15 @@
 
 
 
+URL: <input id="myURL" type=text value="https://industrial.api.ubidots.com/api/v2.0/devices/" size=70><br>
 Authentication: <input id="myAuthenticate" type=text value="authenticate" ><br>
 New Device: <input id="myDevice" type=text value="Portenta8" ><br>
+Variable: <input id="myVariable" type=text value="temp" ><br>
+Amount: <input id="myAmount" type=text value="34" ><br>
+      
+      
+      
+      
 <input type=button value="Ubidots-fetch-post" onclick="{
    asyncPostCall()                                       
  }">
