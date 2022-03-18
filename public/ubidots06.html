@@ -1,4 +1,4 @@
-<h6> Version 0.2.0-32</h6>
+<h6> Version 0.2.0-33</h6>
 
 
 
@@ -6,7 +6,7 @@
 
 
 <script>
-      async function asyncPostCall() {
+      async function myFetchUbidots() {
             try {
                 const response = await fetch(document.getElementById('myURL').value, {
                  method: 'POST',
@@ -14,19 +14,16 @@
                        'accept': 'application/json',
                        'content-type': 'application/json',
                        'x-auth-token' : document.getElementById('myAuthenticate').value
-                 //   'token': document.getElementById('myAuthenticate').value
                    },
                    body: document.getElementById('myBody').value 
                  });
-                 //     body: JSON.stringify({a: 1, b: 'Textual content'}) 
                  const data = await response.json();
-              // enter your logic when the fetch is successful
+                 // enter your logic when the fetch is successful
                  console.log("data");
                  console.log(data);
+                 // output to live webpage 
                  document.getElementById('myDiv01').innerHTML = await   JSON.stringify(data, null, '<br>')
                } catch(error) {
-             // enter your logic for when there is an error (ex. error toast)
-
                   console.log(error)
                  } 
             }
@@ -51,7 +48,7 @@ Body: <br>
       
       
 <input type=button value="Ubidots-fetch-post" onclick="{
-   asyncPostCall()                                       
+   myFetchUbidots()                                       
  }">
 
 <div id="myDiv01">...</div>
