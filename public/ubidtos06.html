@@ -1,0 +1,57 @@
+<h6> Version 0.1.2-31</h6>
+
+
+
+<h3 align=center> Ubidots Vanilla Javascript Async Fetch Form Post by @Rocksetta<h3>
+
+
+<script>
+      const asyncPostCall = async () => {
+            try {
+                const response = await fetch(document.getElementById('myURL').value, {
+                 method: 'POST',
+                 headers: {      
+                       'accept': 'application/json',
+                       'content-type': 'application/json',
+                       'x-auth-token' : document.getElementById('myAuthenticate').value
+                 //   'token': document.getElementById('myAuthenticate').value
+                   },
+                   body: document.getElementById('myBody').value 
+                 });
+                 //     body: JSON.stringify({a: 1, b: 'Textual content'}) 
+                 const data = await response.json();
+              // enter your logic when the fetch is successful
+                 console.log("data");
+                 console.log(data);
+                 document.getElementById('myDiv01').innerHTML = await   JSON.stringify(data, null, '<br>')
+               } catch(error) {
+             // enter your logic for when there is an error (ex. error toast)
+
+                  console.log(error)
+                 } 
+            }
+
+
+  
+</script>
+
+
+
+URL: <input id="myURL" type=text value="https://industrial.api.ubidots.com/api/v2.0/devices/" size=70><br>
+Authentication: <input id="myAuthenticate" type=text value="authenticate" ><br>
+      
+<a href="https://codebeautify.org/jsonviewer">https://codebeautify.org/jsonviewer</a><br>      
+Body: <br>
+<textarea id="myBody" rows=6 cols=50 NOWRAP >
+{"label" : "portenta6" }
+</textarea><br>
+
+      
+      
+      
+      
+<input type=button value="Ubidots-fetch-post" onclick="{
+   asyncPostCall()                                       
+ }">
+
+<div id="myDiv01">...</div>
