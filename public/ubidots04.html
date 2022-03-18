@@ -1,10 +1,10 @@
-<h6> Version 0.0.1-17</h6>
+<h6> Version 0.1.1-18</h6>
 
 
 <script>
       const asyncPostCall = async () => {
             try {
-                const response = await fetch('https://industrial.api.ubidots.com/api/v2.0/devices/', {
+                const response = await fetch('https://industrial.api.ubidots.com/api/v2.0/variables/', {
                  method: 'POST',
                  headers: {      
                        'Accept': 'application/json',
@@ -15,7 +15,8 @@
                    body: JSON.stringify({
                     // your expected POST request payload goes here
                    // 'token': document.getElementById('myAuthenticate').value,
-                     'temp':'223'   
+                     'temp':'223', 
+                     'label' : 'portenta5'   
                     })
                  });
                  //     body: JSON.stringify({a: 1, b: 'Textual content'}) 
@@ -23,6 +24,7 @@
               // enter your logic when the fetch is successful
                  console.log("data");
                  console.log(data);
+                 document.getElementById('myDiv01').innerHTML = await   JSON.stringify(data, null, '<br>')
                } catch(error) {
              // enter your logic for when there is an error (ex. error toast)
 
@@ -36,7 +38,9 @@
 
 
 
-<input id="myAuthenticate" type=text value="authenticate" >
+<input id="myAuthenticate" type=text value="authenticate" ><br>
 <input type=button value="Ubidots-fetch-post" onclick="{
    asyncPostCall()                                       
  }">
+
+<div id="myDiv01">...</div>
