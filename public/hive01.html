@@ -1,5 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
 
+<script>
 
 // Create a client instance: Broker, Port, Websocket Path, Client ID
 client = new Paho.MQTT.Client("iot.eclipse.org", Number(80), "/ws", "clientId");
@@ -92,7 +93,7 @@ function onMessageArrived(message) {
   console.log("onMessageArrived:"+message.payloadString);
 }
 
-*/
+
 
 
 
@@ -104,5 +105,13 @@ message.qos = 0;
 client.send(message);
 
 client.subscribe(“topic”);
+*/
+
+</script>
+
+<h6/Version 0.0.1-1</h6>
 
 
+from<br>
+
+<a href="https://www.hivemq.com/blog/mqtt-client-library-encyclopedia-paho-js/">https://www.hivemq.com/blog/mqtt-client-library-encyclopedia-paho-js/</a>
