@@ -1,5 +1,34 @@
 
 
+<script>
+  <!--create mqtt-connection element-->
+<mqtt-connection
+        id="connection"
+        url="[[url]]"
+        connected="{{connected}}"
+        client="{{client}}"
+        subscriptions="{{subscriptions}}"
+        options='{{options}}'
+        on-mqtt-message="_handelMqttMessage">
+
+<!--create a mqtt subscription for every item in topics-->
+<template is="dom-repeat" items="{{topics}}" as="t">
+<mqtt-subscription topic="[[t.topic]]"
+                           number-of-messages="10"
+                           qos="[[t.qos]]"></mqtt-subscription>
+</template>
+
+<!--create mqtt-publish element to publish mqtt messages to the broker -->
+<mqtt-publish id="pub"
+                    topic="[[topic]]"
+                    payload="[[value]]"
+                    auto$="[[pubAuto]]"
+                    qos="[[pubQos]]"
+                    retained="[[pubRetained]]"></mqtt-publish>
+</mqtt-connection>
+  
+</script>
+
 
 
 
@@ -7,4 +36,16 @@
 
 <h6> verison 0.0.1-1</h6>
 
-From <a href="https://github.com/mqttjs/mqtt-elements">https://github.com/mqttjs/mqtt-elements</a>
+From <a href="https://github.com/mqttjs/mqtt-elements">https://github.com/mqttjs/mqtt-elements</a><br>
+<br>
+
+And  <a href="https://www.hivemq.com/blog/mqtt-client-library-encyclopedia-mqttelements/">https://www.hivemq.com/blog/mqtt-client-library-encyclopedia-mqttelements/</a>
+
+<br>
+
+Demo at <a href="https://github.com/mqttjs/mqtt-elements/blob/master/demo/elements/demo-element.html">https://github.com/mqttjs/mqtt-elements/blob/master/demo/elements/demo-element.html</a>
+<br>
+
+Github at <a hrf="https://github.com/mqttjs/mqtt-elements/blob/master/demo/elements/demo-element.html">https://github.com/mqttjs/mqtt-elements/blob/master/demo/elements/demo-element.html</a>
+
+
