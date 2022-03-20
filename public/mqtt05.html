@@ -1,7 +1,7 @@
 
 
 
-<h6>Version 0.3.5-19</h6>
+<h6>Version 0.3.5-20</h6>
 
 
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
@@ -110,6 +110,12 @@ async function onMessageArrived(message) {
   }
  document.getElementById("myDiv01").innerHTML = 'Topic: '+ message.destinationName + ', message:' + message.payloadString
  document.getElementById("myDiv02").innerHTML = 'Topic: '+ message.destinationName + ', message:' + message.payloadString + '<br>' + document.getElementById("myDiv02").innerHTML
+if (message == 1){
+  document.getElementById("on_button").style.backgroundColor = 'yellow'
+} else {
+  document.getElementById("on_button").style.backgroundColor = 'red'	
+	
+}
 }
 
 // Provides the button logic that toggles our display LED on and off
@@ -127,7 +133,7 @@ async function led_on(){
 	myPayload = await payload
 	document.getElementById("myDiv01").innerHTML = 'sending: '+ myPayload
 	document.getElementById("myDiv02").innerHTML = 'sending: '+ myPayload + '<br>' + document.getElementById("myDiv02").innerHTML
-  document.getElementById("on_button").style.backgroundColor = 'yellow'
+      //  document.getElementById("on_button").style.backgroundColor = 'yellow'
 }
 
 // Provides the button logic that toggles our display LED on and off
@@ -145,7 +151,7 @@ async function led_off(){
 	myPayload = await payload
 	document.getElementById("myDiv01").innerHTML = 'sending: '+ myPayload
 	document.getElementById("myDiv02").innerHTML = 'sending: '+ myPayload + '<br>' + document.getElementById("myDiv02").innerHTML
-        document.getElementById("on_button").style.backgroundColor = 'red'
+      //  document.getElementById("on_button").style.backgroundColor = 'red'
 }
 
 
