@@ -1,7 +1,7 @@
 
 
 
-<h6>Version 0.4.0-22</h6>
+<h6>Version 0.4.1-23</h6>
 
 
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
@@ -28,6 +28,7 @@ let password;
 let tls = false;	
 
 //create client ID or load from storage
+	// not sure if I want this????????
 if ( window.sessionStorage.clientId){
   clientId = window.sessionStorage.clientId;
 }else{
@@ -48,10 +49,20 @@ function connect(){
         username   = document.getElementById("myUsername").value
         password   = document.getElementById("myPassword").value
 	console.log(tls + ", " + username + ", " + password + ", " + port + ", " + clientId)
-		
+	
+	
+	
+	
+	// Now the big changes!!!	
 	client = new Paho.MQTT.Client(hostname, Number(port), clientId);
 	console.info('Connecting to Server: Hostname: ', hostname, '. Port: ', port, '. Client ID: ', clientId);
 
+	
+	
+	
+	
+	
+	
 	// set callback handlers
 	client.onConnectionLost = onConnectionLost;
 	client.onMessageArrived = onMessageArrived;
@@ -60,7 +71,7 @@ function connect(){
 	var options = {
 		onSuccess: onConnect, // after connected, subscribes
 		onFailure: onFail,    // useful for logging / debugging
-    useSSL:true
+                useSSL:true
 	};
 	// connect the client
 	client.connect(options);
@@ -169,7 +180,7 @@ async function led_off(){
 Hostname: <input id="myHostname" type=text value ="test.mosquitto.org"><br>
 Username: <input id="myUsername" type=text value =""><br>
 Password: <input id="myPassword" type=password value =""><br>
-Port: <input id="myPort" type=text value ="8081">HiveMQ TLS use 884<br>
+Port:TLS active not changeable yet <input id="myPort" type=text value ="8081" checked>HiveMQ TLS use 8884 <br>
 CliendID: <input id="myClientId" type=text value =""><br>
 Topic: <input id="myLed_topic" type=text value ="led1"><br>
 TLS: <input id="myTLS" type=checkbox value ="false"> Checked for HiveMQ<br>
