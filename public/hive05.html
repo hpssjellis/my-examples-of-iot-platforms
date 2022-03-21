@@ -1,7 +1,7 @@
 
 
 
-<h6>Version 0.4.1-27</h6>
+<h6>Version 0.4.1-28</h6>
 
 
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
@@ -68,11 +68,34 @@ function connect(){
 	client.onMessageArrived = onMessageArrived;
 
 	// see client class docs for all the options
+	/*
 	var options = {
 		onSuccess: onConnect, // after connected, subscribes
 		onFailure: onFail,    // useful for logging / debugging
                 useSSL:true
 	};
+	
+	
+	*/
+	
+	
+	var options = {
+            timeout: 3,
+            keepAliveInterval: keepAlive,
+            cleanSession: cleanSession,
+            useSSL: ssl,
+            onSuccess: onConnect,
+            onFailure: onFail
+        };
+
+        if (username.length > 0) {
+            options.userName = username;
+        }
+        if (password.length > 0) {
+            options.password = password;
+        }
+	
+	
 	// connect the client
 	client.connect(options);
 	console.info('Connecting...');
