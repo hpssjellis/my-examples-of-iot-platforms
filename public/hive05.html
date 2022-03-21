@@ -1,7 +1,7 @@
 
 
 
-<h6>Version 0.4.1-24</h6>
+<h6>Version 0.4.1-25</h6>
 
 
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
@@ -25,7 +25,7 @@ let led_topic      = "led1";
 let clientId;
 let username;
 let password;
-let tls = false;	
+let tls = true;	   // this is deafult no reason to change it
 
 //create client ID or load from storage
 	// not sure if I want this????????
@@ -180,10 +180,10 @@ async function led_off(){
 Hostname: <input id="myHostname" type=text value ="test.mosquitto.org"><br>
 Username: <input id="myUsername" type=text value =""><br>
 Password: <input id="myPassword" type=password value =""><br>
-Port:<input id="myTls" type=text value ="8081" checked READONLY>HiveMQ TLS use 8884 <br>
+Port: <input id="myPort" type=text value ="8081">Use 8884 for HiveMQ<br>
 CliendID: <input id="myClientId" type=text value =""><br>
 Topic: <input id="myLed_topic" type=text value ="led1"><br>
-TLS: <input id="myTLS" type=checkbox value ="false"> Checked for HiveMQ<br>
+TLS: <input id="myTLS" type=checkbox value ="true" READONLY> No edit<br>
 
 <button id="connect_button" type="button" onclick="connect();">Click Me to Connect</button><br><br>
 <button id="on_button" type="button" onclick="led_on();" disabled>Click Me to turn LED on</button> 	  
