@@ -1,7 +1,7 @@
 
 
 
-<h6>Version 0.4.1-25</h6>
+<h6>Version 0.4.1-26</h6>
 
 
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
@@ -25,7 +25,7 @@ let led_topic      = "led1";
 let clientId;
 let username;
 let password;
-let tls = true;	   // this is deafult no reason to change it
+//let tls = true;	   // this is deafult no reason to change it
 
 //create client ID or load from storage
 	// not sure if I want this????????
@@ -45,7 +45,7 @@ function connect(){
         port       = document.getElementById("myPort").value
         led_topic  = document.getElementById("myLed_topic").value
         clientId   = document.getElementById("myClientId").value
-        tls        = document.getElementById("myTls").value
+        //tls        = document.getElementById("myTls").value
         username   = document.getElementById("myUsername").value
         password   = document.getElementById("myPassword").value
 	console.log(tls + ", " + username + ", " + password + ", " + port + ", " + clientId)
@@ -183,7 +183,7 @@ Password: <input id="myPassword" type=password value =""><br>
 Port: <input id="myPort" type=text value ="8081">Use 8884 for HiveMQ<br>
 CliendID: <input id="myClientId" type=text value =""><br>
 Topic: <input id="myLed_topic" type=text value ="led1"><br>
-TLS: <input id="myTLS" type=checkbox value ="true" READONLY> No edit<br>
+<!--TLS: <input id="myTLS" type=checkbox CHECKED READONLY> No edit<br>-->
 
 <button id="connect_button" type="button" onclick="connect();">Click Me to Connect</button><br><br>
 <button id="on_button" type="button" onclick="led_on();" disabled>Click Me to turn LED on</button> 	  
