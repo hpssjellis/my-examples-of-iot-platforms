@@ -1,3 +1,184 @@
+
+
+
+<h6>Version 0.3.5-21</h6>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
+
+
+
+<script>
+
+/*
+   Eclipse Paho MQTT-JS Utility
+   by Elliot Williams for Hackaday article, modified by Drew Harwell
+*/
+
+// Global variables
+var client;
+
+// These are configs	
+var hostname       = "test.mosquitto.org";
+var port           = "8081";
+var led_topic      = "led1";
+var clientId;
+
+//create client ID or load from storage
+if ( window.sessionStorage.clientId){
+  clientId = window.sessionStorage.clientId;
+}else{
+  clientId = "mqtt_js_" + parseInt(Math.random() * 100000, 10);
+  window.sessionStorage.clientId = clientId;
+}
+
+// This is called after the webpage is completely loaded
+// It is the main entry point into the JS code
+function connect(){
+	// Set up the client
+        // These are configs	
+        hostname   = document.getElementById("myHostname").value
+        port       = document.getElementById("myPort").value
+        led_topic  = document.getElementById("myLed_topic").value
+        clientId   = document.getElementById("myClientId").value
+		
+	client = new Paho.MQTT.Client(hostname, Number(port), clientId);
+	console.info('Connecting to Server: Hostname: ', hostname, '. Port: ', port, '. Client ID: ', clientId);
+
+	// set callback handlers
+	client.onConnectionLost = onConnectionLost;
+	client.onMessageArrived = onMessageArrived;
+
+	// see client class docs for all the options
+	var options = {
+		onSuccess: onConnect, // after connected, subscribes
+		onFailure: onFail,    // useful for logging / debugging
+    useSSL:true
+	};
+	// connect the client
+	client.connect(options);
+	console.info('Connecting...');
+	
+        document.getElementById("myDiv01").innerHTML = 'Connecting...'
+        document.getElementById("myDiv02").innerHTML = 'Connecting...<br>' + document.getElementById('myDiv02').innerHTML
+}
+
+
+function onConnect(context) {
+  console.log("Client Connected");
+	
+  document.getElementById("myDiv01").innerHTML = 'Client Connected'
+  document.getElementById("myDiv02").innerHTML += 'Client Connected<br>'
+  document.getElementById('connect_button').innerHTML = "Connected!";
+  document.getElementById('connect_button').disabled = true;
+  document.getElementById('on_button').disabled = false;
+  document.getElementById('off_button').disabled = false;
+
+  
+    // And subscribe to our topics	-- all with the same callback function
+	options = {qos:0, onSuccess:function(context){ console.log("subscribed"); } }
+	client.subscribe(led_topic, options);
+
+}
+
+function onFail(context) {
+	console.log("Failed to connect");
+	
+	document.getElementById("myDiv01").innerHTML = 'Failed to connect'
+	document.getElementById("myDiv02").innerHTML += 'Failed to connect<br>'
+}
+
+function onConnectionLost(responseObject) {
+	if (responseObject.errorCode !== 0) {
+		console.log("Connection Lost: " + responseObject.errorMessage);
+		window.alert("Someone else took my websocket!\nRefresh to take it back.");
+		document.getElementById("myDiv01").innerHTML = 'Connection Lost:' + responseObject.errorMessage
+                document.getElementById("myDiv02").innerHTML = 'Connection Lost:' + responseObject.errorMessage + '<br>' + document.getElementById("myDiv02").innerHTML
+	}
+}
+
+// Here are the two main actions that drive the webpage:
+//  handling incoming messages and the toggle button.
+
+// Updates the webpage elements with new data, and 
+//  tracks the display LED status as well, 
+//  in case multiple clients are toggling it.
+async function onMessageArrived(message) {
+	console.log('got message to topic:',message.destinationName, 'message:', message.payloadString);
+  if (message.destinationName == led_topic){
+    console.log('got LED message');
+  }
+ document.getElementById("myDiv01").innerHTML = 'Topic: '+ message.destinationName + ', message:' + message.payloadString
+ document.getElementById("myDiv02").innerHTML = 'Topic: '+ message.destinationName + ', message:' + message.payloadString + '<br>' + document.getElementById("myDiv02").innerHTML
+if (parseInt(message.payloadString) == 1){
+  document.getElementById("on_button").style.backgroundColor = 'yellow'
+} else {
+  document.getElementById("on_button").style.backgroundColor = 'red'	
+	
+}
+}
+
+// Provides the button logic that toggles our display LED on and off
+// Triggered by pressing the HTML button "status_button"
+async function led_on(){
+  var payload = "1";
+  led_is_on = true;
+
+	// Send messgae
+	message = new Paho.MQTT.Message(payload);
+	message.destinationName = led_topic;
+	message.retained = true;
+	client.send(message);
+	console.info('sending: ', payload);
+	myPayload = await payload
+	document.getElementById("myDiv01").innerHTML = 'sending: '+ myPayload
+	document.getElementById("myDiv02").innerHTML = 'sending: '+ myPayload + '<br>' + document.getElementById("myDiv02").innerHTML
+      //  document.getElementById("on_button").style.backgroundColor = 'yellow'
+}
+
+// Provides the button logic that toggles our display LED on and off
+// Triggered by pressing the HTML button "status_button"
+async function led_off(){
+  var payload = "0";
+  led_is_on = false;
+
+	// Send messgae
+	message = new Paho.MQTT.Message(payload);
+	message.destinationName = led_topic;
+	message.retained = true;
+	client.send(message);
+	console.info('sending: ', payload);		
+	myPayload = await payload
+	document.getElementById("myDiv01").innerHTML = 'sending: '+ myPayload
+	document.getElementById("myDiv02").innerHTML = 'sending: '+ myPayload + '<br>' + document.getElementById("myDiv02").innerHTML
+      //  document.getElementById("on_button").style.backgroundColor = 'red'
+}
+
+
+</script>
+<h3>Static Website JavaScript Browser MQTT websocket Demo</h3>
+<h4>Using the script at:   <a href="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js">https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js</a></h4>
+<br><br>
+Hostname: <input id="myHostname" type=text value ="test.mosquitto.org"><br>
+Port: <input id="myPort" type=text value ="8081"><br>
+CliendID: <input id="myClientId" type=text value =""><br>
+Topic: <input id="myLed_topic" type=text value ="led1"><br>
+
+<button id="connect_button" type="button" onclick="connect();">Click Me to Connect</button><br><br>
+<button id="on_button" type="button" onclick="led_on();" disabled>Click Me to turn LED on</button> 	  
+<button id="off_button" type="button" onclick="led_off();" disabled>Click Me to turn LED off</button> 	
+<br>
+<div id="myDiv01">Now</div><br>
+<div id="myDiv02">History</div>
+
+
+
+
+
+
+
+
+
 /**
  * Copyright 2013 dc-square GmbH
  *
@@ -14,7 +195,7 @@
  * limitations under the License.
  *
  * @author: Christoph Schäbel
- */
+ 
 
 var websocketclient = {
     'client': null,
@@ -349,3 +530,7 @@ var websocketclient = {
 };
 
 websocketclient.prefill()
+                                                  
+                                                  
+                                                  
+*/
