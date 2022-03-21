@@ -1,7 +1,7 @@
 
 
 
-<h6>Version 0.4.1-28</h6>
+<h6>Version 0.4.1-29</h6>
 
 
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
@@ -26,6 +26,13 @@ let clientId;
 let username;
 let password;
 //let tls = true;	   // this is deafult no reason to change it
+let keepAlive = 3;            //   = parseInt($('#keepAliveInput').val());
+let cleanSession = true;         // = $('#cleanSessionInput').is(':checked');
+let lwTopic ;              // = $('#lwTopicInput').val();
+let lwQos = 0;                // = parseInt($('#lwQosInput').val());
+let lwRetain ;             // = $('#LWRInput').is(':checked');
+let lwMessage ;            // = $('#LWMInput').val();
+let ssl = true;                  // = $('#sslInput').is(':checked');
 
 //create client ID or load from storage
 	// not sure if I want this????????
