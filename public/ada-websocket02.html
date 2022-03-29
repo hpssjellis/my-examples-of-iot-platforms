@@ -36,12 +36,12 @@ let ssl = true;                // = $('#sslInput').is(':checked');
 //create client ID or load from storage
 	// not sure if I want this????????
 if ( window.sessionStorage.clientId){
-  clientId = window.sessionStorage.clientId;
-  document.getElementById('myClientId').value = clientId 
+  clientId = window.sessionStorage.clientId;   // works 
+  document.getElementById('myClientId').value = clientId    // strangely not working
 }else{
   clientId = "mqtt_js_" + parseInt(Math.random() * 100000, 10);
   window.sessionStorage.clientId = clientId;
-  document.getElementById('myClientId').value = clientId
+  document.getElementById('myClientId').value = clientId   // strangely not working
 
 }
 
@@ -215,7 +215,7 @@ Username: <input id="myUsername" type=text value =""  onChange="{
 }"><br>
 Password: <input id="myPassword" type=password value =""><br>  
 Port: <input id="myPort" type=text value ="443"><br>
-CliendID: <input id="myClientId" type=text value ="random345434">Throw something random in here<br>
+CliendID: <input id="myClientId" type=text value ="random345434">Random and if doing 2 websockets they must be unique on each page<br>
 Topic: <input id="myLed_topic" type=text value ="username/feeds/led1"><br>
 <!--TLS: <input id="myTLS" type=checkbox CHECKED READONLY> No edit<br>-->
 
