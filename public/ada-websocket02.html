@@ -42,6 +42,7 @@ if ( window.sessionStorage.clientId){
   clientId = "mqtt_js_" + parseInt(Math.random() * 100000, 10);
   window.sessionStorage.clientId = clientId;
   document.getElementById('myClientId').value = clientId
+
 }
 
 // This is called after the webpage is completely loaded
@@ -214,11 +215,11 @@ Username: <input id="myUsername" type=text value =""  onChange="{
 }"><br>
 Password: <input id="myPassword" type=password value =""><br>  
 Port: <input id="myPort" type=text value ="443"><br>
-CliendID: <input id="myClientId" type=text value ="">Can leave blank, code will generate it for you<br>
+CliendID: <input id="myClientId" type=text value ="random345434">Throw something random in here<br>
 Topic: <input id="myLed_topic" type=text value ="username/feeds/led1"><br>
 <!--TLS: <input id="myTLS" type=checkbox CHECKED READONLY> No edit<br>-->
 
-<button id="connect_button" type="button" onclick="connect();">Click Me to Connect</button><br><br>
+<button id="connect_button" type="button" onclick="connect();">Click Me to Connect</button> Refresh page to disconnect<br><br>
 <button id="on_button" type="button" onclick="led_on();" disabled>Click Me to turn LED on</button> 	  
 <button id="off_button" type="button" onclick="led_off();" disabled>Click Me to turn LED off</button> 	
 <br>
