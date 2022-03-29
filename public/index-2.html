@@ -1,0 +1,101 @@
+<h6>Version 0.2.2-21</h6>
+
+
+<h1 align=center > Which IOT cloud platform should my students use!</h1>
+
+<h3  align=center >Here is an image of my criteria for my students:<br>
+<img src="media/iot-needs.jpg"  width=300   style="border-style:groove; border-color:red; border-width:10px;  " /><br>
+</h3>
+And here are links to the very important static webpages that can communicate with a few IOT cloud platforms<br>
+<b>Webhooks are important for small WiFi capable devices to send data, receive an update would be a nice bonus<br>
+  
+<a href="ubidots05.html">ubidots05.html</a>   or <a href="ubidots06.html">ubidots06.html</a>   or <a href="adafruit01.html">adafruit01.html</a>      or <a href="ada02.html">ada02.html</a>  
+  Webhook static webpage using http or  https that works with Ubidots and can send-only to Adafruit and probably many other integrations.
+  Note: I think Ubidots may have tightened up some security because I can't seem to get it working again!<br><br>
+ 
+ Websockets are important to be able to display data live on a webpage also a bonus if they can send data<br> 
+<a href="hive05.html">hive05.html</a>  This SSL websocket static webpage can communicate with both mosquitto and HiveMQ and probably many more<br><br>
+  
+  
+ <h3  align=center > Note: For HiveMQ more data needs to be entered: username, password, clientID<br>
+ <img src="media/hive05.png"  width=600   style="border-style:groove; border-color:red; border-width:10px;  " /><br> </h3>
+  
+  
+</b>
+  
+  
+Why are static webpages important! NodeJS, PHP etc web servers are very powerful but confusing for my students. 
+<a href="https://gitpod.io/">Gitpod</a> is amazing for development of complex web servers and it ties well with Github but does not stay active 
+for very long, <a href="https://www.heroku.com/">Heroku Cloud</a> is also amazing and works well with Github but is also fairly complex for High School students. <br><br>
+
+Many IOT cloud sites brag about their "Dashboard" and how easy it is to setup<br>
+I like and dislike "dashboards" they are great to get things started, but eventually 
+I will start to need the page view to be slightly different. Over the last 46 years of coding this situation has happened repeatedly where company programmers try to 
+make things easier but actually just cripple your ability to do what you want.<br><br>
+
+An example would be a machine learning program that works from your browser and updates an MQTT site every minute with summarized data. 
+I could easily (might take a year LOL) make that however with Dashboards I would need my machine learning program on one webpage and the dashboard 
+openned on another webpage. For many people that would be fine, for me that would be very frustrating.<br><br>
+
+<h3>IOT cloud sites that are good but not yet great in my opinion!</h3>
+
+<br><a href="">Arduino Cloud:</a> <br><font color="green">Great, easy to use, dashboard simple to understand</font><br> and has<font color="red"> NONE of my criteria in the image above! No free integrations, 
+I have found no examples of easy to use MQTT, HTTPS, Websocket-MQTT. Even things like LoRaWan integrations with the 
+  Portenta LoRa Vision Shield do not seem as easy to setup as they should be. </font>I love Arduino hardware and software, but the Arduino cloud is not yet ready 
+for everything I need, other than<font color="green"> a quick student introduction to setting up a cloud variable and changing it.</font>
+
+
+
+
+<br><br><a href="https://io.adafruit.com/">Adafruit:</a> <br><font color="green"> Free to use, great, easy to use MQTT connectivity also supports CayenneLPP simplification
+of the JSON data, Dashboard easy to work with, works great with the <a href="https://explorer.helium.com/coverage">Helium</a> LoRaWan network and 
+  the <a href="https://console.helium.com/">Helium Console</a>. Https webhooks works to update data</font>. <br> <font color="red">https Webhooks do not work to read data. Have not found websocket-MQTT</font>
+
+<br><br><a href="https://tago.io/">TagioIO</a> or <a href="https://ubidots.com/">Ubidots</a> or <a href="https://thingspeak.com/">ThingSpeak:</a><br><font color="green"> Free to use. Great HTTPS connectivity, 
+  my above webpage demonstrates Ubidots connectivity with https webhooks using a static webpage. </font><br><font color="red">I have not found websockets-MQTT and have not tested 
+    arduino MQTT </font>
+
+<br><br><a href="https://www.hivemq.com/">HiveMQ:</a><br><font color="green"> Free to use: Great WebSocket connectivity as seen by my static webpage above. 
+  Fast easy to use and easy to understand. Lots of free use. </font><br><font color="red">Issues connecting websockets with Helium. I have not found out how to do https webhooks I have not yet tested MQTT with Arduino</font>
+
+
+<br><br><a href="https://www.scaleway.com/en/iot-hub/">Scaleway iot-hub:</a> Was recommended to me but needs a Credit card
+<br><br><a href="https://www.qubitro.com/">Qubitro:</a> Still testing, some positives some negatives
+
+<br><br><a href="https://thingsboard.io/">Thingsboard:</a> Powerful, not sure if the cloud side is free.
+
+<h3>A few resources I like</h3>
+
+
+<li><a href="https://www.hivemq.com/blog/mqtt-over-websockets-with-hivemq/">hive mqtt</a><br>
+
+
+<li><a href=https://io.adafruit.com/api/docs/?cpp#webhooks">adafruit</a><br>
+
+<li><a href=https://help.ubidots.com/en/articles/3383755-connect-the-arduino-nano-33-iot-with-ubidots-over-http">Ubidots</a><br>
+
+
+<h3>A few things I have done</h3>
+  
+Youtube video going through each of the IOT platforms I have found not really finding much <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/MGS7GOdAExE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br><br>
+  
+EdgeImpulse forum talking about the IOT cloud issue <a href="https://forum.edgeimpulse.com/t/arduino-mqtt-broker/2091/17">here</a>  <br><br>
+  
+
+
+
+
+The base github for this static webpage has a  README.md file with lots of Cloud IOT site links for twitter and webpages <a href="https://github.com/hpssjellis/my-examples-of-iot-platforms">here</a> <br><br>
+  
+The old research <a href="index-old.html"> index-old.html</a> page is here with lots of not working examples<br><br>
+  
+<h6>Opinions are my own. Use at your own risk:  By Jeremy Ellis Twitter <a href="https://twitter.com/rocksetta">@rocksetta</a> </h6>
+
+  
+<li><a href="..">...</a>
+  
+<li><a href="..">...</a>
+  
+<li><a href="..">...</a>
