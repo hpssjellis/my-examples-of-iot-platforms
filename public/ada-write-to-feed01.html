@@ -10,7 +10,7 @@ async function sendData() {
   console.log("url")	
   console.log(url)		
  // var formdata = new FormData(myForm);
-  var request = new Request(url, { method: "POST", mode: 'cors',  body: document.getElementById('myTemp').value});
+  var request = new Request(url, { method: "POST", headers:{'Content-Type': 'application/json'},  body: document.getElementById('myTemp').value  });
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   var response = await fetch(request);
