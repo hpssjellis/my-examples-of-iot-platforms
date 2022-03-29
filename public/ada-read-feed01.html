@@ -5,13 +5,12 @@
 <script>
 	
 async function myReadData() {
-  var url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myGroup').value + 
-		    "/data" ;
+  var url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myField').value + "/data" ;
 
   console.log("url")	
   console.log(url)		
  // var formdata = new FormData(myForm);
-  var request = new Request(url, { method: "POST", body: document.getElementById('myTemp').value});
+  var request = new Request(url, { method: "POST", mode: 'cors', body: document.getElementById('myTemp').value  });
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   var response = await fetch(request);
