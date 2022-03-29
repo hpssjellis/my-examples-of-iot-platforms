@@ -17,6 +17,7 @@ async function myReadData() {
   console.log("response")	
   console.log(response)	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(request, null, "<br>");
+  document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
 }	
   
   
@@ -42,6 +43,7 @@ Command: <input type=text id="myCommand"  value="send.json?"><br>  -->
 }"><br><br>
 
 <div id="myDiv01">...</div><br><br>
+<div id="myDiv02">...</div><br><br>
 
 
 
