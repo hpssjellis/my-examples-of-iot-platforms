@@ -4,7 +4,7 @@
 
 <script>
 	
-async function sendData() {
+async function myReadData() {
   var url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myGroup').value + 
 		    "/data" ;
 
@@ -21,48 +21,30 @@ async function sendData() {
 }	
   
   
-  async function sendAll() {
-  var url = new URL(document.getElementById('myAll').value);
-
-  console.log("url")	
-  console.log(url)		
- // var formdata = new FormData(myForm);
-  var request = new Request(url, { method: "POST", body: document.getElementById('myTempAll').value});
- // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
- // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
-  var response = await fetch(request);
-  console.log("response")	
-  console.log(response)	
-  document.getElementById('myDiv01').innerHTML = await JSON.stringify(request, null, "<br>");
-}	
+  
 </script>
 
-<h2 align=center> Adafruit by static webpage</h2>
+<h2 align=center> Adafruit Read data from a static webpage by Rocksetta</h2>
 
-<pre>
 
-send https://io.adafruit.com/api/groups/:group_name/send.json?x-aio-key=a0a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a0a
-
-receive
-https://io.adafruit.com/api/groups/weather/receive.json?x-aio-key=a0a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a0a
-</pre><br><br>
 
 Note: Your Adafruit.io feed must be set to public! or make a webhook in your feeds area (scroll down)<br>
 
-Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80><br>
+<!--Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80><br> -->
 User Name: <input type=text id="myUser" value="jouser"><br>
-Group Name: <input type=text id="myGroup" value="feeds"><br>
-Field Name: <input type=text id="myField" value="temperature-1"><br>
-Send Value: <input type=text id="myTemp"  value="{'testFeed':34}"><br>
-Command: <input type=text id="myCommand"  value="send.json?"><br>
+<!-- Group Name: <input type=text id="myGroup" value="feeds"><br> -->
+Field Name: <input type=text id="myField" value="led1"><br>
+<!-- Send Value: <input type=text id="myTemp"  value="{'testFeed':34}"><br>
+Command: <input type=text id="myCommand"  value="send.json?"><br>  -->
 
+
+<input type=button value="Read Data" onclick="{
+  myReadData()
+}"><br><br>
 
 <div id="myDiv01">...</div><br><br>
 
 
-<input type=button value="SendData" onclick="{
-  sendData()
-}"><br><br>
 
 
 
@@ -80,14 +62,7 @@ Send Value: <input type=text id="myTempAll"  value="{'value':0}"><br>
 
 
 
-<form target="_blank" action="https://io.adafruit.com/api/v2/webhooks/feed/Zb8qS26TM8psRJm1kdJYdXtbWbUr/raw" method="post">
-    <label>
-        Make a choice:
-        <select name="value">
-            <option value="1" selected>1</option>
-            <option value="0">0</option>
-        </select>
-    </label>
-    <button type="submit">Send my value for led1</button>
+<form target="_blank" action="https://io.adafruit.com/api/v2/jerteach/feeds/led1/data" method="post">
+
 </form>
 
