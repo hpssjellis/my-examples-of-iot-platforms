@@ -1,11 +1,11 @@
-<h6>version 0.1.2-8</h6>
+<h6>version 0.1.2-9</h6>
 
 
 
 <script>
 	
 async function sendData() {
-  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw";
+  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw");
 
   console.log("url")	
   console.log(url)		
@@ -45,12 +45,6 @@ Send Value: <input type=text id="myTemp"  value="{'value':34}"><br>
 
 
 
-
-Everything: <input type=text id="myAll" value="" size = 80><br>
-Send Value: <input type=text id="myTempAll"  value="{'value':0}"><br>
-<input type=button value=sendall onclick="{
-  sendAll();                                         
- }">
 
 
 
