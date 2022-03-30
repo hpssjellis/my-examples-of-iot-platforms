@@ -9,7 +9,7 @@ async function mySendData() {
 	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
-  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: document.getElementById('myTemp').value  } );
+  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/json'}, body: document.getElementById('myTemp').value  } );
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   let response = await fetch(request);
@@ -29,7 +29,7 @@ Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a
 <!--User Name: <input type=text id="myUser" value="jouser"><br>
 Group Name: <input type=text id="myGroup" value="feeds"><br>
 Field Name: <input type=text id="myField" value="temperature-1"><br> -->
-Send Value: <input type=text id="myTemp"  value="{'value':34}"><br>
+Send Value: <input type=text id="myTemp"  value="{'value':'2'}"><br>
 <!--Command: <input type=text id="myCommand"  value="send.json?"><br> -->
 
 
