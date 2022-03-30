@@ -1,0 +1,48 @@
+<h6>version 0.4.1-22</h6>
+
+
+
+<script>
+	
+async function mySendData() {
+  let url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value  );
+	
+  document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
+  // var formdata = new FormData(myForm);
+  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: JSON.stringify(document.getElementById('myTemp').value)  } );
+  //  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/json', 'mode': 'no-cors'}, body: document.getElementById('myTemp').value  } );
+  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
+  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
+  let response = await fetch(request);
+
+  document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
+}	
+  
+</script>
+
+<h2 align=center> Adafruit send data using a static weebpage to webhook using JSON</h2>
+
+
+
+Note: Make a webhook in your Adafruit feeds area (scroll down)<br>
+Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 80> Webhook key not the main key<br>
+Send Value: <input type=text id="myTemp"  value="{'value':'2'}"><br>
+
+
+<input type=button value="SendData" onclick="{
+  mySendData()
+}"><br><br>
+
+
+<div id="myDiv01">...</div><br><br>
+<div id="myDiv02">...</div><br><br>
+
+
+
+
+
+
+
+
+		    
+		    
