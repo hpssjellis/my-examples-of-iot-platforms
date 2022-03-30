@@ -1,11 +1,11 @@
-<h6>version 0.4.1-21</h6>
+<h6>version 0.4.1-22</h6>
 
 
 
 <script>
 	
 async function mySendData() {
-  let url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw" );
+  let url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value  );
 	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
   // var formdata = new FormData(myForm);
@@ -26,7 +26,7 @@ async function mySendData() {
 
 Note: Make a webhook (raw) in your feeds area (scroll down)<br>
 
-Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80> Webhook key not main key<br>
+Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 80> Webhook key not main key<br>
 <!--User Name: <input type=text id="myUser" value="jouser"><br>
 Group Name: <input type=text id="myGroup" value="feeds"><br>
 Field Name: <input type=text id="myField" value="temperature-1"><br> -->
