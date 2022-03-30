@@ -5,9 +5,10 @@
    if(myStorage1  != null){     
       document.getElementById('myURL').value = myStorage1 
     }  
-   document.getElementById('myFrame01').src = document.getElementById('myURL').value     
+   document.getElementById('myFrame01').src = document.getElementById('myURL').value    
+              
    mySendToArduino = async function (myData) {   // pre-loads this function
-     const myResponse =  await fetch(document.getElementById('myURL').value+myData, {mode: 'no-cors'})
+     const myResponse =  await fetch(document.getElementById('myURL').value, {mode: 'no-cors'}, 'body': myData)
      await console.log(myData)
      document.getElementById('myFrame01').src = document.getElementById('myURL').value;
   }
@@ -19,17 +20,17 @@
    alert('Device URL =' + document.getElementById('myURL').value + ' Has been stored')
 }">
 
-<input type=text id="myURL" value="" placeholder="http://111.111.1.11"><br>
+<input type=text id="myURL" value="" placeholder="https://io.adafruit.com/api/v2/webhooks/feed/FQVFKZH3xwj3djEcxwpgQetD4mBi"><br>
 
 
 <!-- You work with the following buttons -->
 
-<input type=button value="LED On" onclick="{
-   mySendToArduino('/led-on')
+<input type=button value="34" onclick="{
+   mySendToArduino('34')
 }">
 
-<input type=button value="LED Off" onclick="{
-  mySendToArduino('/led-off')
+<input type=button value="{'value':'3'}" onclick="{
+  mySendToArduino('{\'value\':\'3\'}')
 }">
 
 
