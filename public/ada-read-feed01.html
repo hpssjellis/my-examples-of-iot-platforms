@@ -5,7 +5,7 @@
 <script>
 	
 async function myReadData() {
-  var url = new URL("https://io.adafruit.com/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myField').value + "/data") ;
+  var url = new URL("https://io.adafruit.com/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data") ;
 
   console.log("url")	
   console.log(url)	
@@ -35,8 +35,8 @@ Note: Your Adafruit.io feed must be set to public! or make a webhook in your fee
 <!--Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80><br> -->
 User Name: <input type=text id="myUser" value="jouser"><br>
 <!-- Group Name: <input type=text id="myGroup" value="feeds"><br> -->
-Field Name: <input type=text id="myField" value="led1"><br>
-<!-- Send Value: <input type=text id="myTemp"  value="{'testFeed':34}"><br>
+ Feed Name Name: <input type=text id="myFeed" value="led1"><br>
+<!--Send Value: <input type=text id="myTemp"  value="{'testFeed':34}"> -->
 Command: <input type=text id="myCommand"  value="send.json?"><br>  -->
 
 
