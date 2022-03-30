@@ -4,12 +4,12 @@
 
 <script>
 	
-async function mysendData() {
+async function mySendData() {
   var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw");
 	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
-  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'} body: document.getElementById('myTemp').value  } );
+  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: document.getElementById('myTemp').value  } );
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   let response = await fetch(request);
@@ -34,7 +34,7 @@ Send Value: <input type=text id="myTemp"  value="{'value':34}"><br>
 
 
 <input type=button value="SendData" onclick="{
-  mysendData()
+  mySendData()
 }"><br><br>
 
 
