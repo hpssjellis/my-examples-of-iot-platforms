@@ -1,21 +1,4 @@
 
-
-<form id="myForm01" target="_blank" action="https://io.adafruit.com/api/v2/webhooks/feed/FQVFKZH3xwj3djEcxwpgQetD4mBi" method="post">
-    <label>
-        Make a choice:
-        <select name="value">
-            <option value="1" selected>1</option>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
-    </label>
-    <button type="submit">Send my value for led1</button>
-</form>
-
-
-
-
 <form id="myForm02" target="_blank" action="" method="post">
     <label>
         Make a choice:
@@ -27,8 +10,32 @@
         </select>
     </label>
     <button type="submit" onclick="{
-    // preventDefault()
-     document.getElementById('myForm02').action =  'https://io.adafruit.com/api/v2/webhooks/feed/FQVFKZH3xwj3djEcxwpgQetD4mBi'                                
+       // preventDefault()
+       document.getElementById('myForm02').action =  'https://io.adafruit.com/api/v2/webhooks/feed/FQVFKZH3xwj3djEcxwpgQetD4mBi'                                
                                    
     }">Send my value to webhook feed</button>
+</form> <br><br>
+
+
+
+
+
+
+
+Adaffruit Webhook Key<input id="myWebhookKey" type=text value="0A0A0A0A00A0A00A">
+<form id="myForm02" target="_blank" action="" method="post">
+    <label>
+        Make a choice:
+        <select name="value">
+            <option value="1" selected>1</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+    </label>
+    <button type="submit" onclick="{
+       // preventDefault()
+       document.getElementById('myForm02').action =  'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebhookKey').value                               
+                                   
+    }">Send my value to the webhook feed</button>
 </form>
