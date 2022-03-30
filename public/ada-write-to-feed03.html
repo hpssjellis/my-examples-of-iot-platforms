@@ -1,4 +1,4 @@
-<h6>version 0.4.2-24</h6>
+<h6>version 0.4.2-25</h6>
 
 
 
@@ -13,10 +13,12 @@ async function mySendData() {
   //  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/json', 'mode': 'no-cors'}, body: document.getElementById('myTemp').value  } );
   // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
   // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
-  let response = await fetch(request);
+
   console.log("request")
   console.log(request)
   console.log("---------------------")
+	
+  let response = await fetch(request);	
 	
   console.log("response")
   console.log(response)
