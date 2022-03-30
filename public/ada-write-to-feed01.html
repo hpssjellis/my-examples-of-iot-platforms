@@ -1,4 +1,4 @@
-<h6>version 0.1.2-11</h6>
+<h6>version 0.3.2-14</h6>
 
 
 
@@ -11,7 +11,7 @@ async function sendData() {
   console.log(url)	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
-  var request = new Request(url, { method: "POST", headers:{'Content-Type': 'application/json'},  body: document.getElementById('myTemp').value  });
+  var request = new Request(url, { method: "POST", headers:{'Content-Type': 'application/json', 'mode': 'cors'},  body: document.getElementById('myTemp').value  });
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   var response = await fetch(request);
@@ -29,7 +29,7 @@ async function sendData() {
 
 Note: Make a webhook (raw) in your feeds area (scroll down)<br>
 
-Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80><br>
+Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80> Webhook key not main key<br>
 <!--User Name: <input type=text id="myUser" value="jouser"><br>
 Group Name: <input type=text id="myGroup" value="feeds"><br>
 Field Name: <input type=text id="myField" value="temperature-1"><br> -->
