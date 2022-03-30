@@ -1,4 +1,4 @@
-<h6>version 0.1.2-11</h6>
+<h6>version 0.3.2-14</h6>
 
 
 
@@ -8,7 +8,8 @@ async function myReadData() {
   var url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myField').value + "/data" ;
 
   console.log("url")	
-  console.log(url)		
+  console.log(url)	
+  document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
   var request = new Request(url, { method: "POST", headers:{'Content-Type': 'application/json'},  body: document.getElementById('myTemp').value  });
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
@@ -17,7 +18,7 @@ async function myReadData() {
   var response = await fetch(request);
   console.log("response")	
   console.log(response)	
-  document.getElementById('myDiv01').innerHTML = await JSON.stringify(request, null, "<br>");
+
   document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
 }	
   
@@ -56,7 +57,7 @@ Command: <input type=text id="myCommand"  value="send.json?"><br>  -->
 
 
 
-
+// This needs you to be logged into your adafruit account, or the feed must be made public Not really sure<br>
 
 <form target="_blank" action="https://io.adafruit.com/api/v2/jerteach/feeds/led1/data" method="post">
  <submit>
