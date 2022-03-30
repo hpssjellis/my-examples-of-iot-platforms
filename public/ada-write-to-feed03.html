@@ -1,11 +1,11 @@
-<h6>version 0.4.2-27</h6>
+<h6>version 0.4.2-28</h6>
 
 
 
 <script>
 	
 async function mySendData() {
-  let url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value  );
+  let url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw" );
 	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
   // var formdata = new FormData(myForm);
