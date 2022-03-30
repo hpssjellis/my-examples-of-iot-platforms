@@ -1,0 +1,77 @@
+<h6>version 0.4.0-18</h6>
+
+
+
+<script>
+	
+async function mySendData() {
+  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw");
+	
+  document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
+ // var formdata = new FormData(myForm);
+  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: document.getElementById('myTemp').value  } );
+ // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
+ // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
+  let response = await fetch(request);
+
+  document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
+}	
+  
+</script>
+
+<h2 align=center> Adafruit by Send data using a form static webpage by Rocksetta</h2>
+
+
+
+Note: Make a webhook (raw) in your feeds area (scroll down)<br>
+
+Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80> Webhook key not main key<br>
+<!--User Name: <input type=text id="myUser" value="jouser"><br>
+Group Name: <input type=text id="myGroup" value="feeds"><br>
+Field Name: <input type=text id="myField" value="temperature-1"><br> -->
+Send Value: <input type=text id="myTemp"  value="{'value':34}"><br>
+<!--Command: <input type=text id="myCommand"  value="send.json?"><br> -->
+
+
+<input type=button value="SendData" onclick="{
+  mySendData()
+}"><br><br>
+
+
+<div id="myDiv01">...</div><br><br>
+<div id="myDiv02">...</div><br><br>
+
+
+
+
+
+
+
+
+
+<form target="_blank" action=https://io.adafruit.com/api/v2/webhooks/feed/FQVFKZH3xwj3djEcxwpgQetD4mBi" method="post">
+    <label>
+        Make a choice:
+        <select name="value">
+            <option value="1" selected>1</option>
+            <option value="0">0</option>
+        </select>
+    </label>
+    <button type="submit">Send my value for led1</button>
+</form>
+
+		    
+		    
+		    
+		    
+<form target="document.getElementById('myFrame2').src" action="https://io.adafruit.com/api/v2/webhooks/feed/dQTc61soU5S4tMv8jSuSjY9uSqVz" method="post">
+    <label>
+        Make a choice:
+        <select name="value">
+            <option value="YES" selected>Yes</option>
+            <option value="NO">No</option>
+        </select>
+    </label>
+    <button type="submit">Save my vote!</button>
+</form>
+<iFrame id="myFrame2" rows=70 cols=5> </iFrame>
