@@ -35,7 +35,12 @@ Adaffruit Webhook Key<input id="myWebhookKey" type=text value="0A0A0A0A00A0A00A"
     </label>
     <button type="submit" onclick="{
        // preventDefault()
-       document.getElementById('myForm02').action =  'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebhookKey').value                               
+       let myURL = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebhookKey').value 
+                                   
+       console.log("myURL")      
+       console.log(myURL)
+                                   
+       document.getElementById('myForm02').action =  myURL                               
                                    
     }">Send my value to the webhook feed</button>
 </form>
