@@ -5,7 +5,7 @@
 <script>
 	
 async function myReadData() {
-  let url = new URL("https://io.adafruit.com/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" ) ;
+  let url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" ) ;
 	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
   // var formdata = new FormData(myForm);
