@@ -1,14 +1,15 @@
-<h6>version 0.1.2-10</h6>
+<h6>version 0.1.2-11</h6>
 
 
 
 <script>
 	
 async function sendData() {
-  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw");
+  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value);
 
   console.log("url")	
-  console.log(url)		
+  console.log(url)	
+  document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
   var request = new Request(url, { method: "POST", headers:{'Content-Type': 'application/json'},  body: document.getElementById('myTemp').value  });
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
@@ -16,7 +17,7 @@ async function sendData() {
   var response = await fetch(request);
   console.log("response")	
   console.log(response)	
-  document.getElementById('myDiv01').innerHTML = await JSON.stringify(request, null, "<br>");
+
   document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
 }	
   
@@ -52,7 +53,7 @@ Send Value: <input type=text id="myTemp"  value="{'value':34}"><br>
 
 
 
-<form target="_blank" action="https://io.adafruit.com/api/v2/webhooks/feed/Zb8qS26TM8psRJm1kdJYdXtbWbUr/raw" method="post">
+<form target="document.getElementById('myFrame').src" action=https://io.adafruit.com/api/v2/webhooks/feed/FQVFKZH3xwj3djEcxwpgQetD4mBi/raw" method="post">
     <label>
         Make a choice:
         <select name="value">
@@ -62,3 +63,4 @@ Send Value: <input type=text id="myTemp"  value="{'value':34}"><br>
     </label>
     <button type="submit">Send my value for led1</button>
 </form>
+			 <iFrame id="myFrame" rows=70 cols=5> </iFrame>
