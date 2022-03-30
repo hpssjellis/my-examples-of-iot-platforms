@@ -5,13 +5,13 @@
 <script>
 	
 async function myReadData() {
-  var url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myField').value + "/data" ;
+  var url = new URL("https://io.adafruit.com/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myField').value + "/data" ;
 
   console.log("url")	
   console.log(url)	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
-  var request = new Request(url, { method: "POST", headers:{'Content-Type': 'application/json'},  body: document.getElementById('myTemp').value  });
+  var request = new Request(url, { method: "POST", headers:{'Content-Type': 'application/json', 'mode':'no-cors'},  body: document.getElementById('myTemp').value  });
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
 	//    headers: {'Content-Type': 'application/json',},
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
