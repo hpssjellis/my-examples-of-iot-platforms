@@ -1,4 +1,4 @@
-<h6>version 0.4.0-17</h6>
+<h6>version 0.4.0-18</h6>
 
 
 
@@ -6,9 +6,7 @@
 	
 async function myReadData() {
   var url = new URL("https://io.adafruit.com/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data") ;
-
-  console.log("url")	
-  console.log(url)	
+	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
   var request = new Request(url, { method: "POST",  body: document.getElementById('myTemp').value  });
@@ -16,8 +14,6 @@ async function myReadData() {
 	//    headers: {'Content-Type': 'application/json',},
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
   var response = await fetch(request);
-  console.log("response")	
-  console.log(response)	
 
   document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
 }	
@@ -35,9 +31,9 @@ Note: Your Adafruit.io feed must be set to public! or make a webhook in your fee
 <!--Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80><br> -->
 User Name: <input type=text id="myUser" value="jouser"><br>
 <!-- Group Name: <input type=text id="myGroup" value="feeds"><br> -->
- Feed Name Name: <input type=text id="myFeed" value="led1"><br>
-<!--Send Value: <input type=text id="myTemp"  value="{'testFeed':34}"> -->
-Command: <input type=text id="myCommand"  value="send.json?"><br>  -->
+ Feed Name : <input type=text id="myFeed" value="led1"><br>
+Send Value: <input type=text id="myTemp"  value="{'testFeed':34}"> 
+<!--Command: <input type=text id="myCommand"  value="send.json?"><br>  -->
 
 
 <input type=button value="Read Data" onclick="{
