@@ -1,4 +1,4 @@
-<h6>version 0.5.0-21</h6>
+<h6>version 0.5.0-22</h6>
 
 
 
@@ -9,7 +9,8 @@ async function myReadData() {
 	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
   // var formdata = new FormData(myForm);
-  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}  });
+  let request = new Request(url, { method: "POST" });
+ // let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}  });
   // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
   //    headers: {'Content-Type': 'application/json',},
   // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
