@@ -1,23 +1,23 @@
-<h6>version 0.5.0-20</h6>
+<h6>version 0.5.0-21</h6>
 
 
 
 <script>
 	
 async function myReadData() {
-  var url = new URL("https://io.adafruit.com/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" ) ;
+  let url = new URL("https://io.adafruit.com/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" ) ;
 	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
- // var formdata = new FormData(myForm);
-  var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}  });
- // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
-	//    headers: {'Content-Type': 'application/json',},
- // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
+  // var formdata = new FormData(myForm);
+  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}  });
+  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
+  //    headers: {'Content-Type': 'application/json',},
+  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
 	
 	
 document.getElementById('myDiv02').innerHTML = await JSON.stringify(request, null, "<br>");	
 	
-  var response = await fetch(request);
+ let response = await fetch(request);
 
   document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
 }	
@@ -30,14 +30,12 @@ document.getElementById('myDiv02').innerHTML = await JSON.stringify(request, nul
 
 
 
-Note: Your Adafruit.io feed must be set to public! or make a webhook in your feeds area (scroll down)<br>
+Note: Your Adafruit.io feed must be set to public! <br>
 
-<!--Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a0a0a00a0a0a0a0a0a0a" size = 80><br> -->
-User Name: <input type=text id="myUser" value="jouser"><br>
-<!-- Group Name: <input type=text id="myGroup" value="feeds"><br> -->
- Feed Name : <input type=text id="myFeed" value="led1"><br>
-Send Value: <input type=text id="myTemp"  value="{'testFeed':34}"> 
-<!--Command: <input type=text id="myCommand"  value="send.json?"><br>  -->
+
+User Name: <input type=text id="myUser" value="joeUser"><br>
+Feed Name : <input type=text id="myFeed" value="led1"><br>
+
 
 
 <input type=button value="Read Data" onclick="{
