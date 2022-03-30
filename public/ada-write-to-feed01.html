@@ -1,22 +1,18 @@
-<h6>version 0.4.0-16</h6>
+<h6>version 0.4.0-17</h6>
 
 
 
 <script>
 	
 async function mysendData() {
-  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value);
-
-  console.log("url")	
-  console.log(url)	
+  var url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw");
+	
   document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
  // var formdata = new FormData(myForm);
-  var request = new Request(url, { method: "POST",  body: document.getElementById('myTemp').value  });
+  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'} body: document.getElementById('myTemp').value  } );
  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
-  var response = await fetch(request);
-  console.log("response")	
-  console.log(response)	
+  let response = await fetch(request);
 
   document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
 }	
