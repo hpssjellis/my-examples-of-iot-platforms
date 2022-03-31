@@ -1,4 +1,4 @@
-<h6> Verison 0.0.1-7</h6>
+<h6> Verison 0.0.1-8</h6>
 
 <h2 align=center>Static webpage to Adafruit.io from a form by Rocksetta</h2>
 
@@ -44,10 +44,13 @@ Adafruit Webhook Key<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A">
        // preventDefault()
        let myURL = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value 
                                    
-       console.log("myURL")      
-       console.log(myURL)
+       document.getElementById().innerHtML = myURL
                                    
        document.getElementById('myForm02').action =  myURL                               
                                    
     }">Send my value to the webhook feed</button>
 </form>
+
+
+
+<div id="myDiv01">...</div>
