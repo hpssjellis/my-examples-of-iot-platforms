@@ -1,0 +1,76 @@
+<h6>version 0.6.2-25</h6>
+
+
+
+<script>
+	
+async  function myReadSimple(){
+   //	let myurl = https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" 
+   let myResponse = await fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data')
+   let myJson = await myResponse.json()
+   console.log(await myResponse)
+  //.then(response => response.json())
+  //.then(data => console.log(data));
+  document.getElementById('myDiv02').innerHTML = await JSON.stringify(myJson, null, "<br>");
+}	
+	
+	
+/*
+	
+	
+async function myReadData() {
+  let url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" ) ;
+	
+  document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
+  // var formdata = new FormData(myForm);
+  let request = new Request(url, { method: "POST" });
+ // let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}  });
+  // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
+  //    headers: {'Content-Type': 'application/json',},
+  // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
+	
+	
+document.getElementById('myDiv02').innerHTML = await JSON.stringify(request, null, "<br>");	
+	
+ let response = await fetch(request);
+
+  document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
+}	
+  
+  */
+  
+</script>
+
+<h2 align=center> Adafruit Read public feed data from a static webpage by Rocksetta</h2>
+
+
+
+Note: Your Adafruit.io feed must be set to public! <br>
+
+
+User Name: <input type=text id="myUser" value="joeUser"><br>
+Feed Name : <input type=text id="myFeed" value="led1"><br>
+
+
+
+<input type=button value="Read Data" onclick="{
+  //myReadData()
+  myReadSimple()
+}"><br><br>
+
+<div id="myDiv01">...</div><br><br>
+<div id="myDiv02">...</div><br><br>
+
+
+
+
+
+
+
+
+
+
+
+// This needs your feed to be made public!<br>
+
+
