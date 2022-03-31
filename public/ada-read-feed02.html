@@ -1,4 +1,4 @@
-<h6>version 1.1.1-32</h6>
+<h6>version 1.1.2-33</h6>
 
 
 
@@ -6,17 +6,17 @@
 	
 async function myReadSimple(){
    let myURL = "https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" 
-  // let myResponse = await fetch(myURL)
-   console.log(myURL)
-   let myResponse = await fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data')
+   let myResponse = await fetch(myURL)
+   //console.log(myURL)
+   //let myResponse = await fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data')
    let myJson = await myResponse.json()
    
-   document.getElementById('myDiv01').innerHTML =  "JSON.stringify(myJson[0].value, null, null) = " + await JSON.stringify(myJson[0].value, null, "<br>") 
-   document.getElementById('myDiv01').innerHTML += "JSON.stringify(myJson[1].value, null, null) = " + await JSON.stringify(myJson[1].value, null, "<br>") 
-   document.getElementById('myDiv01').innerHTML += "JSON.stringify(myJson[2].value, null, null) = " + await JSON.stringify(myJson[2].value, null, "<br>") 
+   document.getElementById('myDiv01').innerHTML =  "JSON.stringify(myJson[0].value, null, null) = " + await JSON.stringify(myJson[0].value, null, null) + "<br>"
+   document.getElementById('myDiv01').innerHTML += "JSON.stringify(myJson[1].value, null, null) = " + await JSON.stringify(myJson[1].value, null, null) + "<br>"
+   document.getElementById('myDiv01').innerHTML += "JSON.stringify(myJson[2].value, null, null) = " + await JSON.stringify(myJson[2].value, null, null) + "<br>"
    
    document.getElementById('myDiv02').innerHTML	= "The entire data dump <br>"
-   document.getElementById('myDiv02').innerHTML = await JSON.stringify(myJson, null, "<br>");
+   document.getElementById('myDiv02').innerHTML += await JSON.stringify(myJson, null, "<br>");
 }	
 	
 	
