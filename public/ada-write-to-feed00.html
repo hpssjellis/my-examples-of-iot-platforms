@@ -1,6 +1,9 @@
-<h6> Verison 0.0.1-6</h6>
+<h6> Verison 0.0.1-7</h6>
+
+<h2 align=center>Static webpage to Adafruit.io from a form by Rocksetta</h2>
 
 
+True form example<br>
 <form id="myForm02" target="_blank" action="" method="post">
     <label>
         Make a choice:
@@ -24,7 +27,7 @@
 
 
 
-Adaffruit Webhook Key<input id="myWebhookKey" type=text value="0A0A0A0A00A0A00A">
+Adaffruit Webhook Key<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A">
 <form id="myForm02" target="" action="" method="post">
     <label>
         Make a choice:
@@ -36,8 +39,10 @@ Adaffruit Webhook Key<input id="myWebhookKey" type=text value="0A0A0A0A00A0A00A"
         </select>
     </label>
     <button type="submit" onclick="{
+       console.log("document.getElementById('myWebHookKey').value")
+       console.log(document.getElementById('myWebHookKey').value)
        // preventDefault()
-       let myURL = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebhookKey').value 
+       let myURL = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value 
                                    
        console.log("myURL")      
        console.log(myURL)
