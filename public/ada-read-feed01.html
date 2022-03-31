@@ -4,6 +4,17 @@
 
 <script>
 	
+async  function myReadSimple(){
+   let myResponse = fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data').json()
+  //.then(response => response.json())
+  //.then(data => console.log(data));
+  document.getElementById('myDiv02').innerHTML = await JSON.stringify(myResponse, null, "<br>");
+}	
+	
+	
+/*
+	
+	
 async function myReadData() {
   let url = new URL("https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" ) ;
 	
@@ -23,7 +34,7 @@ document.getElementById('myDiv02').innerHTML = await JSON.stringify(request, nul
   document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
 }	
   
-  
+  */
   
 </script>
 
@@ -40,7 +51,8 @@ Feed Name : <input type=text id="myFeed" value="led1"><br>
 
 
 <input type=button value="Read Data" onclick="{
-  myReadData()
+  //myReadData()
+  myReadSimple()
 }"><br><br>
 
 <div id="myDiv01">...</div><br><br>
