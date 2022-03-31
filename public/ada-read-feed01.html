@@ -1,10 +1,11 @@
-<h6>version 0.5.0-22</h6>
+<h6>version 0.6.0-23</h6>
 
 
 
 <script>
 	
 async  function myReadSimple(){
+   //	let myurl = https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" 
    let myResponse = fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data').json()
   //.then(response => response.json())
   //.then(data => console.log(data));
@@ -38,7 +39,7 @@ document.getElementById('myDiv02').innerHTML = await JSON.stringify(request, nul
   
 </script>
 
-<h2 align=center> Adafruit Read data from a static webpage by Rocksetta</h2>
+<h2 align=center> Adafruit Read public feed data from a static webpage by Rocksetta</h2>
 
 
 
