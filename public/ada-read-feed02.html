@@ -1,12 +1,12 @@
-<h6>version 1.0.2-29</h6>
+<h6>version 1.0.2-30</h6>
 
 
 
 <script>
 	
-async  function myReadSimple(){
-   	let myUrl = "https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" 
-   let myResponse = await fetch(myUrl)
+async function myReadSimple(){
+   //let myUrl = "https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" 
+  // let myResponse = await fetch(myUrl)
    let myResponse = await fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data')
    let myJson = await myResponse.json()
    
