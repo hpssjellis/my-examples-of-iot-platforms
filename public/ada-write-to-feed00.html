@@ -1,4 +1,4 @@
-<h6> Verison 0.0.1-8</h6>
+<h6> Verison 0.1.0-9</h6>
 
 <h2 align=center>Static webpage to Adafruit.io from a form by Rocksetta</h2>
 
@@ -42,7 +42,8 @@ Adafruit Webhook Key<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A">
        console.log("document.getElementById('myWebHookKey').value")
        console.log(document.getElementById('myWebHookKey').value)
        // preventDefault()
-       let myURL = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value 
+        let myURL = new url('https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value) 
+        //let myURL = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value 
                                    
        document.getElementById().innerHtML = myURL
                                    
