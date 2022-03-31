@@ -1,4 +1,4 @@
-<h6> Verison 0.1.0-9</h6>
+<h6> Verison 0.1.0-10</h6>
 
 <h2 align=center>Static webpage to Adafruit.io from a form by Rocksetta</h2>
 
@@ -27,7 +27,7 @@ True form example<br>
 
 
 
-Adafruit Webhook Key<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A">
+Adafruit Webhook Key:<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A">
 <form id="myForm02" target="" action="" method="post">
     <label>
         Make a choice:
@@ -38,19 +38,27 @@ Adafruit Webhook Key<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A">
             <option value="2">2</option>
         </select>
     </label>
-    <button type="submit" onclick="{
+    <input type="submit" onclick="{
        console.log("document.getElementById('myWebHookKey').value")
        console.log(document.getElementById('myWebHookKey').value)
        // preventDefault()
         let myURL = new url('https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value) 
         //let myURL = 'https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value 
                                    
-       document.getElementById().innerHtML = myURL
+       document.getElementById().innerHTML = myURL
                                    
        document.getElementById('myForm02').action =  myURL                               
                                    
-    }">Send my value to the webhook feed</button>
-</form>
+    }">
+</form>    
+
+<button type="button" value="showURL" onclick="{
+
+   let myURL = new url('https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value)                         
+   document.getElementById().innerHTML = myURL
+                                   
+                                                           
+}">
 
 
 
