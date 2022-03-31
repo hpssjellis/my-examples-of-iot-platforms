@@ -1,4 +1,4 @@
-<h6>version 0.6.0-23</h6>
+<h6>version 0.6.1-24</h6>
 
 
 
@@ -6,7 +6,8 @@
 	
 async  function myReadSimple(){
    //	let myurl = https://io.adafruit.com/api/v2/" + document.getElementById('myUser').value + "/feeds/" + document.getElementById('myFeed').value + "/data" 
-   let myResponse = fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data').json()
+   let myResponse = await fetch('https://io.adafruit.com/api/v2/jerteach/feeds/led1/data')
+   let myJson = await myResponse.json()
   //.then(response => response.json())
   //.then(data => console.log(data));
   document.getElementById('myDiv02').innerHTML = await JSON.stringify(myResponse, null, "<br>");
