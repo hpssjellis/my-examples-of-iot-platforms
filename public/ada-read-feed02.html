@@ -1,4 +1,4 @@
-<h6>version 1.1.2-33</h6>
+<h6>version 1.1.3-34</h6>
 
 
 
@@ -15,7 +15,7 @@ async function myReadSimple(){
    document.getElementById('myDiv01').innerHTML += "JSON.stringify(myJson[1].value, null, null) = " + await JSON.stringify(myJson[1].value, null, null) + "<br>"
    document.getElementById('myDiv01').innerHTML += "JSON.stringify(myJson[2].value, null, null) = " + await JSON.stringify(myJson[2].value, null, null) + "<br>"
    
-   document.getElementById('myDiv02').innerHTML	= "The entire data dump <br>"
+   document.getElementById('myDiv02').innerHTML	= "The entire data dump has:  " + await myJson.length() + " entries <br>"
    document.getElementById('myDiv02').innerHTML += await JSON.stringify(myJson, null, "<br>");
 }	
 	
