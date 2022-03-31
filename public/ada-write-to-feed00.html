@@ -39,7 +39,7 @@ Adafruit Webhook Key:<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A"
         </select>
     </label>
     <input type="submit" onclick="{
-       console.log("document.getElementById('myWebHookKey').value")
+       console.log('document.getElementById('myWebHookKey').value')
        console.log(document.getElementById('myWebHookKey').value)
        // preventDefault()
         let myURL = new url('https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value) 
@@ -52,7 +52,7 @@ Adafruit Webhook Key:<input id="myWebHookKey" type=text value="0A0A0A0A00A0A00A"
     }">
 </form>    
 
-<button type="button" value="showURL" onclick="{
+<input type="button" value="showURL" onclick="{
 
    let myURL = new url('https://io.adafruit.com/api/v2/webhooks/feed/' + document.getElementById('myWebHookKey').value)                         
    document.getElementById().innerHTML = myURL
