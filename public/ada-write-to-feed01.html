@@ -1,4 +1,4 @@
-<h6>version 0.4.1-24</h6>
+<h6>version 0.4.1-25</h6>
 
 
 
@@ -14,7 +14,8 @@ async function mySendData() {
   let myResponse = await fetch(request).json();
   let myJsonResponse = await myResponse.json();	
 	
-  document.getElementById('myDiv02').innerHTML = await myJsonResponse
+  document.getElementById('myDiv02').innerHTML = 'Wow'
+ // document.getElementById('myDiv02').innerHTML = await myJsonResponse
 
   //document.getElementById('myDiv02').innerHTML = JSON.stringify(myJsonResponse, null, "<br>");
 }	
