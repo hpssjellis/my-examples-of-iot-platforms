@@ -36,20 +36,18 @@
   <ol> The following needs your webhook key. That's it.
   
    <li>Easiest way to send data to io.adafruit.com; Just use a normal HTML form. Copy following into a file with a .html extension<br> 
-     <textarea rows=1 cols=80 NOWRAP>
-    
-       <form id="myForm01"  target="_blank"  action="YOUR ADAFRUIT WEBHOOK" method="post">
-    <label>
-        Make a choice:
-        <select name="value">
-            <option value="0" selected>0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
-    </label>
-    <button type="submit">Send data to io.adafruit.com</button>
-</form> <br><br>
-     
+     <textarea rows=3 cols=80 NOWRAP>
+Adafruit webhooks are in the format<br> 
+https://io.adafruit.com/api/v2/webhooks/feed/rvVztyR9G5D51ix6xoNkFCMMGG9T
+<form id="myForm01"  target="_blank"  action="https://io.adafruit.com/api/v2/webhooks/feed/rvVztyR9G5D51ix6xoNkFCMMGG9T" method="POST">
+  Send your choice:
+  <select name="value">
+    <option value="0" selected>0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select><br>
+  <input type="submit" value="Send data to io.adafruit.com">
+</form> 
     </textarea>
    <li><a href="ada-write-to-feed01.html">ada-write-to-feed01.html</a> Send raw data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
    <li><a href="ada-write-to-feed02.html">ada-write-to-feed02.html</a> Send formatted <b>value=4</b> data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
