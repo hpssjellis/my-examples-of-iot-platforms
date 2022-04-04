@@ -1,0 +1,47 @@
+<h6>version 1.0.1-25</h6>
+
+
+<script>
+	
+async function mySendData() {
+  let myUrl = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value  );
+	
+  document.getElementById('myDiv01').innerHTML =  "<b>Sending: </b>" + myUrl
+
+  let myRequest = new Request(myUrl, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: document.getElementById('myTemp').value  } );
+	
+  try {	
+    let myResponse = await fetch(myRequest);
+    let myJsonResponse = await myResponse.json();	
+    document.getElementById('myDiv02').innerHTML = '<b>Response: </b>' + JSON.stringify(myJsonResponse, null, '<br>');
+  } catch(e) { document.getElementById('myDiv02').innerHTML =  "<b style='color:red; ' >Error: </b>" + e.message} 
+		
+}	
+  
+</script>
+
+
+<h2 align=center> Adafruit send data using a static webpage to webhook using JSON format and Vanilla Javascript Async/Await Fetch</h2>
+
+Note: Make a webhook in your Adafruit feeds area<br><br>
+Also Note: Multi-level JSON will still work but will break most of the Adafruit Dashboard elements which are expecting simple JSON<br><br>
+
+Webhook Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 30> Webhook key not main key<br>
+Send JSON Format: <input type=text id="myTemp"  value="{'value':'4'}"><br> The actual format is {"value": {"value" : "2" }}, but the code looks after the first level<br>
+
+<input type=button value="SendData" onclick="{
+  mySendData()
+}"><br><br>
+
+<div id="myDiv01">...</div><br><br>
+<div id="myDiv02">...</div><br><br>
+
+
+
+
+
+
+
+
+		    
+		    
