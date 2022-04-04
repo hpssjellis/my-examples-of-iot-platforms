@@ -5,7 +5,7 @@
 	
 async function mySendData() {
   var myUrl = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/raw");
-  document.getElementById('myDiv01').innerHTML = "<b>sending: </b>" + myUrl
+  document.getElementById('myDiv01').innerHTML = "<b>Sending: </b>" + myUrl
 	
   let myRequest = new Request(myUrl, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: document.getElementById('myTemp').value  } );
   try {	
