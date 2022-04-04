@@ -1,10 +1,10 @@
-<h6>version 0.5.7-38</h6>
+<h6>version 0.5.7-39</h6>
 
 
 <script>
 	
 async function mySendData() {
-  let myUrl = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value/json  );
+  let myUrl = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/json"  );
 	
   document.getElementById('myDiv01').innerHTML =  "<b>Sending: </b>" + myUrl
 
@@ -30,6 +30,8 @@ Also Note: Multi-level JSON will still work but will break most of the Adafruit 
 
 Webhook Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 30> Webhook key not main key<br>
 Send JSON Format: <input type=text id="myTemp"  value='{"value" : {"value" : "5"} }'><br> 
+
+{"value":22.587,"lat":38.1123,"lon":-91.2325,"ele":112}<br>
 
 <input type=button value="SendData" onclick="{
   mySendData()
