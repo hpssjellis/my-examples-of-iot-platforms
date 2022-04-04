@@ -11,15 +11,15 @@ async function mySendData() {
   try {	
     let myResponse = await fetch(myRequest);
     let myJsonResponse = await myResponse.json();	
-    document.getElementById('myDiv02').innerHTML = '<b>Response: </b>' + JSON.stringify(myJsonResponse, null, "<br>");
-  } catch(e) { document.getElementById('myDiv02').innerHTML = '<b style='color:red; '>Error: </b>' + e.message}
+    document.getElementById('myDiv02').innerHTML = "<b>Response: </b>" + JSON.stringify(myJsonResponse, null, "<br>");
+  } catch(e) { document.getElementById('myDiv02').innerHTML = "<b style='color:red; ' >Error: </b>" + e.message}
 
 }	
   
 </script>
 
 
-<h2 align=center> Adafruit send RAW data (Just the value to change) using a static webpage to a webhook</h2>
+<h2 align=center> Adafruit send RAW data (Just the value to change) using a static webpage to a webhook with Async/Await Vanilla Javascript Fetch</h2>
 
 Note: Make a webhook (either raw or regular) in your feeds area <br>
 
