@@ -22,16 +22,16 @@
 </ul> 
   
 
-<h3>Steps for students to use Adafruit.io</h3>
+<h3><a href="#steps">Steps for students</a> to use Adafruit.io</h3>
 <ol>  
-<li> Signup/Login to the <a href="https://accounts.adafruit.com/users/sign_up/">Adafruit.io</a> website.Click "IO" --> Click "MY-KEY" --> Copy your <b>Username</b> and your <b>Active Key</b> 
-<li> Then load this page to send/receive data from a static MQTT-Websocket  <a href="ada-websocket02.html"> ada-websocket02.html </a> IT WORKS GREAT!
-  <li> Now try an MQTT app for Android like <a href="https://play.google.com/store/apps/details?id=snr.lab.iotmqttpanel.prod&hl=en_CA&gl=US">iotmqttpanel</a> 
+<br><li> Signup/Login to the <a href="https://accounts.adafruit.com/users/sign_up/">Adafruit.io</a> website.Click "IO" --> Click "MY-KEY" --> Copy your <b>Username</b> and your <b>Active Key</b> 
+<br><li> Then load this page to send/receive data from a static MQTT-Websocket  <a href="ada-websocket02.html"> ada-websocket02.html </a> IT WORKS GREAT!
+  <br><li> Now try an MQTT app for Android like <a href="https://play.google.com/store/apps/details?id=snr.lab.iotmqttpanel.prod&hl=en_CA&gl=US">iotmqttpanel</a> 
     or for any laptop <a href="https://nodered.org/">Node-Red</a> or for Windows try <a href="http://mqtt-explorer.com/">MQTT-explorer</a> <br>
     Reminder to use "feeds" and not "feed"  <b>/{username}/feeds/{name-of-feed} </b><br>
     If you find these confusing then just move on
 
-<li> Send data from a static webpage over  HTTP 
+<br><li> Send data from a static webpage over  HTTP 
   <ol> The following needs your webhook key. That's it.
   
    <li>Easiest way to send data to io.adafruit.com; Just use a normal HTML form. Copy following into a file with a .html extension<br> 
@@ -48,22 +48,22 @@ https://io.adafruit.com/api/v2/webhooks/feed/rvVztyR9G5D51ix6xoNkFCMMGG9T
   <input type="submit" value="Send data to io.adafruit.com">
 </form> 
     </textarea>
-   <li><a href="ada-write-to-feed01.html">ada-write-to-feed01.html</a> Send raw data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
-   <li><a href="ada-write-to-feed02.html">ada-write-to-feed02.html</a> Send formatted <b>value=4</b> data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
-   <li><a href="ada-write-to-feed03.html">ada-write-to-feed03.html</a> Send JSON formatted <b>{"value":"4"}</b> data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
+  <br> <li><a href="ada-write-to-feed01.html">ada-write-to-feed01.html</a> Send raw data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
+   <br><li><a href="ada-write-to-feed02.html">ada-write-to-feed02.html</a> Send formatted <b>value=4</b> data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
+   <br><li><a href="ada-write-to-feed03.html">ada-write-to-feed03.html</a> Send JSON formatted <b>{"value":"4"}</b> data to Adafruit using vanilla Javascript async await fetch. WORKS GREAT
   
   </ol>
     
 <li> Read data from a webpage over  HTTP   Draft: <a href="ada-read-feed02.html">ada-read-feed02.html</a>  WORKS GREAT <br><br>
   
   <H3>Now the important Arduino Connections</h3>
-  <li> Send data from an Arduino PortentaH7 using HTTP over Wifi or Ethernet (Working on this)  
-  <li> Send data from an Arduino PortentaH7 using MQTT over WiFi or Ethernet  (Working on this)
-  <li> Send data from an Arduino  PortentaH7 using Websockets over WiFi or Ethernet  (Working on this)
+  <br><li> Send data from an Arduino PortentaH7 using HTTP over Wifi or Ethernet (Working on this)  
+  <br><li> Send data from an Arduino PortentaH7 using MQTT over WiFi or Ethernet  (Working on this)
+ <br> <li> Send data from an Arduino  PortentaH7 using Websockets over WiFi or Ethernet  (Working on this)
   
-  <li>Try an Adafruit MQTT integration with the <a href="https://console.helium.com/">Helium console</a> (advanced: need a LoRaWan board) Get 10,000 Data Credits for signing up. WORKS GREAT
+  <br><li>Try an Adafruit MQTT integration with the <a href="https://console.helium.com/">Helium console</a> (advanced: need a LoRaWan board) Get 10,000 Data Credits for signing up. WORKS GREAT
    
-  <li>Try an Adafruit HTTP integration with the <a href="https://console.helium.com/">Helium console</a> (advanced: need a LoRaWan board) Get 10,000 Data Credits for signing up. I still need to test this.
+  <br><li>Try an Adafruit HTTP integration with the <a href="https://console.helium.com/">Helium console</a> (advanced: need a LoRaWan board) Get 10,000 Data Credits for signing up. I still need to test this.
 </ol>  
   
  <br><br><br> <hr><br><br><br>
