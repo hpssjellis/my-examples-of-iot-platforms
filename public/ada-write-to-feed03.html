@@ -1,4 +1,4 @@
-<h6>version 0.4.2-31</h6>
+<h6>version 0.5.0-32</h6>
 
 <script>
 	
@@ -9,7 +9,7 @@ async function mySendData() {
 
 	
 	                                                                                                       //actual format is {"value" : {'value':'2'}}
-  let request = new Request(myUrl, { method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify({"value": JSON.stringify(document.getElementById('myTemp').value)  }) } );
+  let myRequest = new Request(myUrl, { method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify({"value": JSON.stringify(document.getElementById('myTemp').value)  }) } );
   //  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/json', 'mode': 'no-cors'}, body: document.getElementById('myTemp').value  } );
   // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
   // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
@@ -30,9 +30,10 @@ async function mySendData() {
 
 
 Note: Make a webhook in your Adafruit feeds area (scroll down)<br>
+Also Note: Advanced JSON will still work but will break most of the Adafruit Dashboard elements which are expecting simple JSON
 
 Webhook Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 30> Webhook key not the main key<br>
-Send JSON Format: <input type=text id="myTemp"  value="{'value':'2'}"><br>
+Send JSON Format: <input type=text id="myTemp"  value="{'value':'2'}"><br> Actual format is {"value": {"value" : "2" }}, but the code looks after the first level
 
 <input type=button value="SendData" onclick="{
   mySendData()
