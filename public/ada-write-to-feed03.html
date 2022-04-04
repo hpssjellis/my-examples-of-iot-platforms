@@ -1,51 +1,40 @@
-<h6>version 0.4.2-28</h6>
-
-
+<h6>version 0.4.2-29</h6>
 
 <script>
 	
 async function mySendData() {
-  let url = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value  );
+  let myUrl = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value  );
 	
-  document.getElementById('myDiv01').innerHTML = await JSON.stringify(url, null, "<br>");
+  document.getElementById('myDiv01').innerHTML = "<b>Sending: </b>" + myUrl
   // var formdata = new FormData(myForm);
-  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: JSON.stringify({"value": JSON.stringify(JSON.stringify(document.getElementById('myTemp').value) ) } )  } );
+  let request = new Request(myUrl, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: JSON.stringify({"value": JSON.stringify(JSON.stringify(document.getElementById('myTemp').value) ) } )  } );
   //  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/json', 'mode': 'no-cors'}, body: document.getElementById('myTemp').value  } );
   // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
   // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
 
-  console.log("request")
-  console.log(await request)
-  console.log("---------------------")
+   try {	
+     let myResponse = await fetch(myRequest);
+     let myJsonResponse = await myResponse.json();	
+     document.getElementById('myDiv02').innerHTML = '<b>Response: </b>' + JSON.stringify(myJsonResponse, null, "<br>");
+   } catch(e) { document.getElementById('myDiv02').innerHTML = '<b style='color:red; '>Error: </b>' + e.message}	
 	
-  let response = await fetch(request);	
 	
-  console.log("response")
-  console.log(await response)
-  console.log("---------------------")	
 	
-  console.log("JSON.stringify(response)")
-  console.log(await JSON.stringify(response))
-  console.log("---------------------")	
-
-  document.getElementById('myDiv02').innerHTML = await JSON.stringify(response, null, "<br>");
-}	
+	
   
 </script>
 
-<h2 align=center> Adafruit send data using a static webpage to webhook using JSON</h2>
-
+<h2 align=center> Adafruit send data using a static webpage to webhook using JSON and Vanilla Javascript Aysnc/Await Fetch</h2>
 
 
 Note: Make a webhook in your Adafruit feeds area (scroll down)<br>
-Private Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 30> Webhook key not the main key<br>
-Send Value: <input type=text id="myTemp"  value="{'value':'2'}"><br>
 
+Webhook Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 30> Webhook key not the main key<br>
+Send JSON Format: <input type=text id="myTemp"  value="{'value':'2'}"><br>
 
 <input type=button value="SendData" onclick="{
   mySendData()
 }"><br><br>
-
 
 <div id="myDiv01">...</div><br><br>
 <div id="myDiv02">...</div><br><br>
