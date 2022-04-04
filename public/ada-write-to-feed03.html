@@ -1,4 +1,4 @@
-<h6>version 0.4.2-29</h6>
+<h6>version 0.4.2-30</h6>
 
 <script>
 	
@@ -7,7 +7,7 @@ async function mySendData() {
 	
   document.getElementById('myDiv01').innerHTML = "<b>Sending: </b>" + myUrl
   // var formdata = new FormData(myForm);
-  let request = new Request(myUrl, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: JSON.stringify({"value": JSON.stringify(JSON.stringify(document.getElementById('myTemp').value) ) } )  } );
+  let request = new Request(myUrl, { method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify(JSON.stringify({"value": JSON.stringify(document.getElementById('myTemp').value)  }) )  } );
   //  let request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/json', 'mode': 'no-cors'}, body: document.getElementById('myTemp').value  } );
   // var request = new Request(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'}, body: {"value":34} });
   // var request = new Request(url, { method: "POST", body: document.getElementById('myForm').mytemp });
@@ -15,8 +15,8 @@ async function mySendData() {
    try {	
      let myResponse = await fetch(myRequest);
      let myJsonResponse = await myResponse.json();	
-     document.getElementById('myDiv02').innerHTML = '<b>Response: </b>' + JSON.stringify(myJsonResponse, null, "<br>");
-   } catch(e) { document.getElementById('myDiv02').innerHTML = '<b style='color:red; '>Error: </b>' + e.message}	
+     document.getElementById('myDiv02').innerHTML = "<b>Response: </b>" + JSON.stringify(myJsonResponse, null, "<br>");
+   } catch(e) { document.getElementById('myDiv02').innerHTML =  "<b style='color:red; ' >Error: </b>" + e.message}	
 	
 	
 	
