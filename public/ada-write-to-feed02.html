@@ -14,14 +14,14 @@ async function mySendData() {
     let myResponse = await fetch(myRequest);
     let myJsonResponse = await myResponse.json();	
     document.getElementById('myDiv02').innerHTML = '<b>Response: </b>' + JSON.stringify(myJsonResponse, null, "<br>");
-  } catch(e) { document.getElementById('myDiv02').innerHTML = '<b style='color:red; '>Error: </b>' + e.message}	
+  } catch(e) { document.getElementById('myDiv02').innerHTML =  "<b style='color:red; ' >Error: </b>" + e.message} 
 		
 }	
   
 </script>
 
 
-<h2 align=center> Adafruit send data using a static webpage to webhook using form value format and Vanilla Javascript Async/Await</h2>
+<h2 align=center> Adafruit send data using a static webpage to webhook using form value format and Vanilla Javascript Async/Await Fetch</h2>
 
 Note: Make a webhook in your Adafruit feeds area<br>
 Webhook Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 30> Webhook key not main key<br>
