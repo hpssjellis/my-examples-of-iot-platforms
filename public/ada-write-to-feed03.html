@@ -1,4 +1,4 @@
-<h6>version 1.0.1-44</h6>
+<h6>version 1.0.2-45</h6>
 
 
 <script>
@@ -27,7 +27,19 @@ Note: Make a webhook in your Adafruit feeds area<br><br>
 Also Note: Multi-level JSON will still work but will break most of the Adafruit Dashboard elements which are expecting simple JSON<br><br>
 
 Webhook Key: <input type=text id="myKey" value="a0a00a0a0a0a0a00a0a" size = 30> Webhook key not main key<br>
-Send JSON Format: <input type=text id="myTemp" size=70 value='{"value":22.587,"lat":38.1123,"lon":-91.2325,"ele":112}'>  or just    { "value" : "5" } <br> 
+Send JSON Format: <textarea  id="myTemp" cols=60 rows=5 NOWRAP>
+{
+  "value": 22.587,
+  "lat": 38.1123,
+  "lon": -91.2325,
+  "ele": 112
+}	
+</textarea>	or just    { "value" : "5" } <br>
+	
+
+
+
+Send JSON Format: <input type=text id="myTempbad" size=70 value='{"value":22.587,"lat":38.1123,"lon":-91.2325,"ele":112}'>  or just    { "value" : "5" } <br> 
 
 <br>
 
