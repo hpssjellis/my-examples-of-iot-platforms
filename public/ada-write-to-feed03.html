@@ -1,10 +1,10 @@
-<h6>version 0.5.7-40</h6>
+<h6>version 0.5.7-41</h6>
 
 
 <script>
 	
 async function mySendData() {
-  let myUrl = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value   );
+  let myUrl = new URL("https://io.adafruit.com/api/v2/webhooks/feed/" + document.getElementById('myKey').value + "/json"  );
 	
   document.getElementById('myDiv01').innerHTML =  "<b>Sending: </b>" + myUrl
 
