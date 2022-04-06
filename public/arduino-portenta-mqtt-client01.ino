@@ -55,8 +55,8 @@ void connect() {
   }
 
   Serial.print("\nWifi Connected, now connecting to the MQTT Broker ...");
+  
                          // clientID (a random unique number), username, activeKey, bool for skip
- // while (!client.connect("arduino8234545", "jerteach", "aio_EHAu48LWqMZ843WhhXoFYCSnKBcp", false)) {
   while (!client.connect(THE_RANDOM_ID, THE_USER_NAME, THE_ADAFRUIT_ACTIVE_KEY)) {
     Serial.print(".");
     delay(3000);
