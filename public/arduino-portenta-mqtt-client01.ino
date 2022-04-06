@@ -24,7 +24,7 @@ int myPort = 8883;   //ssl 8883,  insecure 1883
 #define THE_RANDOM_ID "random2345345"   // if using several devices each one needs this to be unique
 #define THE_USER_NAME "yourUSER"
 #define THE_ADAFRUIT_ACTIVE_KEY "aio_aaaaa-your-active-key-aaaaaa"
-#define THE_TOPIC_USER_FEEDS_KEY "yourUSER/feeds/yourFeedKey"   // can be different for subscribe and publish
+#define THE_TOPIC_USER_FEEDS_KEY "yourUSER/feeds/yourFeedName"   // such as         joeUser/feeds/led1
 
 long myMillisSecondDelay = 30000;   // 30000 = 30 seconds
 
