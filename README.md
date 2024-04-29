@@ -18,6 +18,76 @@ Note: we will use chirpstack, meteoscientific or Helium-iot as the interafce wit
 Lets start the research April 29th, 2024
 
 
+# 2024 Cloud storage
+
+1. https://cloud.google.com/solutions/iot/
+2. https://openremote.io/
+3. https://blynk.io/?utm_source=softwaretestinghelp.com&utm_medium=referral&utm_campaign=top10
+4. https://www.ptc.com/en/products/iot/thingworx-platform
+5. https://www.ibm.com/internet-of-things
+6. https://www.iri.com/solutions/big-data/iot
+7. https://thingsboard.io/google-iot-core-alternative/
+8. https://cloud.google.com/find-a-partner/partner/litmus-automation
+9. https://cloud.google.com/find-a-partner/partner/leverege
+10. https://cloud.google.com/find-a-partner/partner/kore
+11. https://cloud.google.com/find-a-partner/partner/hangzhou-emq-technologies-co-ltd
+12. https://cloud.google.com/find-a-partner/partner/dianomic-systems-inc
+13. https://cloud.google.com/find-a-partner/partner/clearblade
+14. https://cloud.google.com/find-a-partner/partner/aeris
+15. https://cloud.google.com/find-a-partner/partner/sotec
+16. https://cloud.google.com/find-a-partner/partner/quantiphi-inc
+17. https://cloud.google.com/find-a-partner/partner/clearobject-inc
+18. 
+19. https://www.resiot.io/
+20. https://datacake.co/
+21. https://www.chirpstack.io/
+22. https://www.blockbax.com/
+23. https://mydevices.com/
+24. https://www.cloudstudio.com/
+25. https://www.daizy.io/
+26. https://www.influxdata.com/solutions/
+27. 
+28. https://www.pulseway.com/
+29. https://www.wildernesslabs.co/pricing
+30. 
+31. https://www.g2.com/products/fogwing-iiot-platform/reviews
+32. https://www.g2.com/deals
+33. https://www.g2.com/products/emqx/reviews
+34. https://www.g2.com/products/telnyx-iot/reviews
+35. https://www.g2.com/products/akenza/reviews
+36. https://www.g2.com/products/1ot/reviews
+37. https://www.g2.com/products/golioth/reviews
+38. https://www.g2.com/products/thingsup-iot-platform/reviews
+39. https://www.g2.com/products/axonize/reviews
+40. https://www.g2.com/products/emnify/reviews
+41. https://www.g2.com/products/frog-connect-formerly-upswift/reviews
+42. https://www.g2.com/products/kaa/reviews
+43. https://www.g2.com/products/qt/reviews
+44. https://www.g2.com/products/crosser/reviews
+45. https://www.g2.com/products/daizy-iot-management-platform/reviews
+46. https://www.g2.com/products/drivr-core/reviews
+47. https://www.g2.com/products/droam-iot-platform/reviews
+48. https://www.g2.com/products/element-analytics/reviews
+49. https://www.g2.com/products/faircomedge/reviews
+50. https://www.g2.com/products/cloud-studio-gear-studio/reviews
+51. https://www.g2.com/products/iiotnext-platform/reviews
+52. https://www.g2.com/products/iot-glue/reviews
+53. https://www.g2.com/products/iot-ignite/reviews
+54. https://www.g2.com/products/ixon-cloud/reviews
+55. https://www.g2.com/products/onomondo/reviews
+56. https://www.g2.com/products/rayven/reviews
+57. https://www.g2.com/products/software-ag-software-ag-cumulocity-iot/reviews
+58. https://www.g2.com/products/spotflow-iot-platform/reviews
+59. https://www.g2.com/products/fogwing-iiot-platform/reviews
+60. https://www.g2.com/products/hologram/reviews
+61. https://www.g2.com/products/iotconnect/reviews
+62. https://www.g2.com/products/azure-iot-central/reviews
+63. https://www.g2.com/products/particle/reviews
+64. https://www.g2.com/products/ibm-watson-iot-platform/reviews
+65. https://www.g2.com/products/aws-iot-things-graph/reviews
+66. https://www.g2.com/products/sap-leonardo-internet-of-things/reviews
+67. https://www.g2.com/products/exosite-exosense-iot/reviews
+68. https://www.g2.com/products/google-cloud-iot-core/reviews
 
 
 
