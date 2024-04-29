@@ -1,7 +1,28 @@
 # my-examples-of-iot-platforms
 
-website static MQTT examples at 
+2022 result website that picked adafruit.io as the top site for websockes MQTT and Http for educators IMHO. The website static MQTT examples at 
 https://hpssjellis.github.io/my-examples-of-iot-platforms/public/index.html
+
+
+
+#  Updated April 2024  Helium COnsole is not allowing new logins!
+
+
+Now what do we do. Let's start this research again
+
+
+So far the sites I would like to try are datacake, adafruit.io, tago.io and quibitro  does anyone have other suggestions?
+
+Note: we will use chirpstack meteoscientific or Helium-iot as the interafce wityh the helium network, but if anyone has another suggestionb I am open to it.
+
+
+
+
+
+
+
+
+
 
 # Twitter IOT Platforms either MQTT based or some other method (probably HTTPS)
 
