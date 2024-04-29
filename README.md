@@ -8,12 +8,14 @@ https://hpssjellis.github.io/my-examples-of-iot-platforms/public/index.html
 #  Updated April 2024  Helium Console is not allowing new logins!
 
 
-Now what do we do. Let's start this research again
+Now what do we do? Let's start this research again!
 
 
-So far the sites I would like to try are datacake, adafruit.io, tago.io and quibitro  does anyone have other suggestions?
+So far the sites I would like to try are: datacake, adafruit.io, tago.io and quibitro  does anyone have other suggestions?
 
-Note: we will use chirpstack meteoscientific or Helium-iot as the interafce wityh the helium network, but if anyone has another suggestionb I am open to it.
+Note: we will use chirpstack, meteoscientific or Helium-iot as the interafce wityh the helium network, but if anyone has another suggestion I am open to it perferably a cloud data storage stie with 1-3 free devices that also has the LNS (LoRaWan network server) to the Helium network. First issue is that the full system from RAK2270 Sticker Tracker works and second can the site connect with all three: http (s), MQTT(s) and WebSockets. 
+
+Lets start the research April 29th, 2024
 
 
 
@@ -21,12 +23,6 @@ Note: we will use chirpstack meteoscientific or Helium-iot as the interafce wity
 
 
 .
-
-
-.
-
-
-
 
 
 .
@@ -40,12 +36,18 @@ Note: we will use chirpstack meteoscientific or Helium-iot as the interafce wity
 
 
 
+
 .
 
 
 
 
+.
 
+
+
+
+---------------------------- This is the old work I did a while ago --------------------------------------------------------
 
 
 # Twitter IOT Platforms either MQTT based or some other method (probably HTTPS)
