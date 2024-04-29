@@ -5,7 +5,7 @@ https://hpssjellis.github.io/my-examples-of-iot-platforms/public/index.html
 
 
 
-#  Updated April 2024  Helium COnsole is not allowing new logins!
+#  Updated April 2024  Helium Console is not allowing new logins!
 
 
 Now what do we do. Let's start this research again
@@ -17,6 +17,30 @@ Note: we will use chirpstack meteoscientific or Helium-iot as the interafce wity
 
 
 
+
+
+
+.
+
+
+.
+
+
+
+
+
+.
+
+
+
+
+
+.
+
+
+
+
+.
 
 
 
