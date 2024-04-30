@@ -27,9 +27,9 @@ Lets start the research April 29th, 2024
 5. https://www.ibm.com/internet-of-things
 6. https://www.iri.com/
 7. https://thingsboard.io/
-8. https://litmus-automation
-9. https://leverege
-10. https://kore
+8. https://decisions.com/    not free
+9. https://www.leverege.com/
+10. https://www.korewireless.com/
 11. https://hangzhou-emq-technologies-co-ltd
 12. https://dianomic-systems-inc
 13. https:///clearblade
