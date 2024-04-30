@@ -73,21 +73,24 @@ Lets start the research April 29th, 2024
 51.  https://iiotnext.com/
 52.  https://www.torryharris.com/solution-accelerators/iot-glue-iot-integration-tool
 53.  https://www.iot-ignite.com/
-54. https://ixon-cloud/
-55. https://onomondo/
-56. https://rayven/
-57. https://software-ag-software-ag-cumulocity-iot/
-58. https://spotflow-iot-platform/
-59. https://fogwing-iiot-platform/
-60. https://hologram/
-61. https://iotconnect/
-62. https://azure-iot-central/
-63. https://particle/
-64. https://ibm-watson-iot-platform/
-65. https://aws-iot-things-graph/
-66. https://sap-leonardo-internet-of-things/
-67. https://exosite-exosense-iot/
-68. https://google-cloud-iot-core/
+54. https://www.ixon.cloud/en/
+55.  https://onomondo.com/pricing/
+56.  https://www.rayven.io/rayven-pricing
+57.  https://www.softwareag.com/en_corporate/platform/iot.html
+58. https://spotflow.io/pricing    pricy
+59.  
+60.  https://try.hologram.io/
+61.  https://www.iotconnect.io/
+62.  https://azure.microsoft.com/en-ca
+63.  https://www.particle.io/pricing/   
+64.  https://www.ibm.com/watsonx/pricing
+65.  https://www.datadoghq.com/dg
+66.  https://www.sap.com/
+67.  https://www.exosite.com/pricing
+68.  https://www.datadoghq.com/dg
+69.  https://start.paloaltonetworks.com/
+70.  https://cloud.google.com/pricing
+71.  
 
 
 
