@@ -32,11 +32,11 @@ Lets start the research April 29th, 2024
 10. https://www.korewireless.com/
 11. https://www.emqx.com/en/about
 12. https://dianomic.com/
-13. https:///clearblade
-14. https://aeris
-15. https://sotec
-16. https://quantiphi-inc
-17. https://clearobject-inc
+13.  https://www.clearblade.com/iot-core/
+14.  https://www.aeris.com/
+15.  https://www.sotec.eu/en/topics-services/internet-of-things/
+16.  https://quantiphi.com/
+17.  https://www.clearobject.com/
 18. 
 19. https://www.resiot.io/
 20. https://datacake.co/
