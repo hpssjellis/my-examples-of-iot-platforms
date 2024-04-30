@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <h1>WebSocket Live Data Stream</h1>
+    <div id="messages"></div>
+
+    <script>
+        const socket = new WebSocket('wss://your-lns-api.com/socket');
+
+        socket.onopen = function(event) {
+            console.log('Connection opened:', event);
+        };
+
+        socket.onmessage = function(event) {
+            console.log('Message from server ', event.data);
+            document.getElementById('messages').innerHTML += `<p>${event.data}</p>`;
+        };
+
+        socket.onerror = function(error) {
+            console.log('WebSocket Error: ' + error);
+        };
+
+        socket.onclose = function(event) {
+            console.log('WebSocket is closed now.');
+        };
+    </script>
+</body>
+</html>
