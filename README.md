@@ -47,20 +47,20 @@ Lets start the research April 29th, 2024
 25. https://www.daizy.io/
 26. https://www.influxdata.com/solutions/
 27. 
-28. https://www.pulseway.com/
-29. https://www.wildernesslabs.co/pricing
+28. https://www.pulseway.com/      pricy
+29. https://www.wildernesslabs.co/pricing      i should try this
 30. 
-31. https://www.g2.com/products/fogwing-iiot-platform/reviews
-32. https://
-33. https://emqx/
-34. https:/telnyx-iot/
-35. https://akenza/
-36. https://1ot/
-37. https://golioth/
-38. https://thingsup-iot-platform/
+31.  
+32.  https://www.fogwing.io/pricing/
+33. https://www.emqx.com/en/pricing
+34.  https://telnyx.com/pricing/
+35.  https://akenza.io/pricing
+36.  https://1ot.com/
+37.  https://golioth.io/pricing
+38.  https://thingsup.io/iot-platform/
 39. https://axonize/
-40. https://emnify/
-41. https://frog-connect-formerly-upswift/
+40.  https://www.emnify.com/
+41.  https://jfrog.com/pricing/
 42. https://kaa/
 43. https://qt/
 44. https://crosser/
