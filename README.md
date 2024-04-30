@@ -61,18 +61,18 @@ Lets start the research April 29th, 2024
 39. https://axonize/
 40.  https://www.emnify.com/
 41.  https://jfrog.com/pricing/
-42. https://kaa/
-43. https://qt/
-44. https://crosser/
-45. https://daizy-iot-management-platform/
-46. https://drivr-core/s
-47. https://droam-iot-platform/
-48. https://element-analytics/
-49. https://faircomedge/
-50. https://cloud-studio-gear-studio/
-51. https://iiotnext-platform/
-52. https://iot-glue/
-53. https://iot-ignite/
+42.  https://www.kaaiot.com/
+43.  https://www.qt.io/pricing    pricy
+44.  https://www.crosser.io/
+45.  https://daizy.io/
+46. 
+47.  https://droam.com/
+48. https://www.elementanalytics.com/
+49.  https://www.faircom.com/learn/blog/automatically-inegrate-iot-data
+50.  https://www.cloud.studio/
+51.  https://iiotnext.com/
+52.  https://www.torryharris.com/solution-accelerators/iot-glue-iot-integration-tool
+53.  https://www.iot-ignite.com/
 54. https://ixon-cloud/
 55. https://onomondo/
 56. https://rayven/
