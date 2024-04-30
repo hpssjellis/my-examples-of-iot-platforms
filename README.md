@@ -42,8 +42,8 @@ Lets start the research April 29th, 2024
 20. https://datacake.co/
 21. https://www.chirpstack.io/
 22. https://www.blockbax.com/
-23. https://mydevices.com/
-24. https://www.cloudstudio.com/
+23. https://mydevices.com/      might be good 5 devices for free
+24.  https://www.cloud.studio/
 25. https://www.daizy.io/
 26. https://www.influxdata.com/solutions/
 27. 
