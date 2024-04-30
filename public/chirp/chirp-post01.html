@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch LNS Data</title>
+</head>
+<body>
+    <h1>Data from LNS</h1>
+    <button id="fetchData">Fetch Data</button>
+    <pre id="output"></pre>
+
+    <script>
+
+
+document.getElementById('fetchData').addEventListener('click', fetchData);
+
+function fetchData() {
+    const url = 'https://your-lns-api.com/data'; // Replace with the actual API URL
+    const headers = {
+        "Authorization": "Bearer YOUR_ACCESS_TOKEN", // Replace with your actual token or authentication header
+        "Content-Type": "application/json"
+    };
+
+    fetch(url, { method: 'GET', headers: headers })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('output').textContent = 'Failed to fetch data';
+        });
+}
+
+      
+    </script>
+</body>
+</html>
