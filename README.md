@@ -21,9 +21,9 @@ Lets start the research April 29th, 2024
 # 2024 Cloud storage
 
 1. https://cloud.google.com/solutions/iot/
-2. https://openremote.io/
-3. https://blynk.io/
-4. https://thingworx-platform
+2. https://openremote.io/                      looks interesting
+3. https://blynk.io/                           might be the best
+4. https://www.rayven.io/rayven-pricing        looks easy
 5. https://www.ibm.com/internet-of-things
 6. https://www.iri.com/
 7. https://thingsboard.io/
