@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MQTT ChirpStack Controller</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+input, button { padding: 10px; margin-top: 5px; }
+button { cursor: pointer; }
+#output { margin-top: 20px; }
+</style>
+</head>
+<body>
+<h2>ChirpStack MQTT Device Controller</h2>
+<label for="hostname">Hostname:</label>
+<input id="hostname" type="text" value="your-mqtt-broker-hostname"><br>
+
+<label for="port">Port:</label>
+<input id="port" type="text" value="8883"><br>
+
+<label for="clientId">Client ID:</label>
+<input id="clientId" type="text" value="mqtt_js_" disabled><br>
+
+<label for="username">Username:</label>
+<input id="username" type="text" value="your-username"><br>
+
+<label for="password">Password:</label>
+<input id="password" type="password" value="your-password"><br>
+
+<label for="applicationId">Application ID:</label>
+<input id="applicationId" type="text" value="your-application-id"><br>
+
+<label for="deviceEui">Device EUI:</label>
+<input id="deviceEui" type="text" value="your-device-eui"><br>
+
+<button onclick="connect();">Connect</button>
+<button onclick="sendCommand('1');" disabled id="btnOn">Turn On</button>
+<button onclick="sendCommand('0');" disabled id="btnOff">Turn Off</button>
+
+<div id="output"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
+<script>
+let client, hostname, port, clientId, username, password, applicationId, deviceEui;
+
+function connect() {
+    hostname = document.getElementById('hostname').value;
+    port = parseInt(document.getElementById('port').value);
+    clientId = 'mqtt_js_' + parseInt(Math.random() * 100000, 10);
+    username = document.getElementById('username').value;
+    password = document.getElementById('password').value;
+    applicationId = document.getElementById('applicationId').value;
+    deviceEui = document.getElementById('deviceEui').value;
+
+    client = new Paho.MQTT.Client(hostname, port, clientId);
+
+    let options = {
+        useSSL: true,
+        userName: username,
+        password: password,
+        onSuccess: onConnect,
+        onFailure: onFail
+    };
+
+    client.connect(options);
+    client.onMessageArrived = onMessageArrived;
+    document.getElementById('output').innerHTML = 'Attempting to connect...';
+}
+
+function onConnect() {
+    document.getElementById('output').innerHTML = 'Connected!';
+    document.getElementById('btnOn').disabled = false;
+    document.getElementById('btnOff').disabled = false;
+}
+
+function onFail(responseObject) {
+    document.getElementById('output').innerHTML = 'Failed to connect: ' + responseObject.errorMessage;
+}
+
+function sendCommand(command) {
+    let topic = `application/${applicationId}/device/${deviceEui}/tx`;
+    let message = new Paho.MQTT.Message(command);
+    message.destinationName = topic;
+    client.send(message);
+    document.getElementById('output').innerHTML = 'Sent command: ' + command;
+}
+
+function onMessageArrived(message) {
+    document.getElementById('output').innerHTML = 'Message Arrived: ' + message.payloadString;
+}
+</script>
+</body>
+</html>
