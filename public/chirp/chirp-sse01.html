@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server-Sent Events Example</title>
+</head>
+<body>
+    <h1>Live Data from LNS</h1>
+    <div id="data"></div>
+
+    <script>
+        const eventSource = new EventSource('https://your-lns-api.com/events');
+        eventSource.onmessage = function(event) {
+            console.log('New event from the server:', event.data);
+            document.getElementById('data').innerHTML += `<p>${event.data}</p>`;
+        };
+
+        eventSource.onerror = function(error) {
+            console.error('EventSource failed:', error);
+            eventSource.close();
+        };
+    </script>
+</body>
+</html>
