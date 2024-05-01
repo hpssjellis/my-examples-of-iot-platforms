@@ -8,6 +8,24 @@ https://hpssjellis.github.io/my-examples-of-iot-platforms/public/index.html
 #  Updated April 2024  Helium Console is not allowing new logins!
 
 
+April 29th, 2024. So I got Helium-iot and datacake working so I will stop this research and hopefully make some videos.
+
+
+
+
+.
+
+
+
+
+
+.
+
+
+
+
+
+
 Now what do we do? Let's start this research again!
 
 
