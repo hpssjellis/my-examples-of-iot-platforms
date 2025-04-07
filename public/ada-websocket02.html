@@ -45,6 +45,9 @@ if ( window.sessionStorage.clientId){
 
 }
 
+// Assign random ClientID.
+document.getElementById("myClientId").value = `browser${(1000 + Math.floor(Math.random() * 8999))}`
+
 // This is called after the webpage is completely loaded
 // It is the main entry point into the JS code
 function connect(){
@@ -215,7 +218,7 @@ Username: <input id="myUsername" type=text value =""  onChange="{
 }"><br>
 Active-Key: <input id="myPassword" type=password value =""><br>  
 Port: <input id="myPort" type=text value ="443"><br>
-ClientID: <input id="myClientId" type=text value ="browser286957">Random and if doing 2 websockets they must be unique on each page<br>
+ClientID: <input id="myClientId" type=text value =`browser${1000 + Math.floor(Math.random() * 8999}`>Random and if doing 2 websockets they must be unique on each page<br>
 Topic: <input id="myLed_topic" type=text value ="username/feeds/led1"><br>
 <!--TLS: <input id="myTLS" type=checkbox CHECKED READONLY> No edit<br>-->
 
